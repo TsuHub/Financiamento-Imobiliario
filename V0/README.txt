@@ -20,14 +20,25 @@ Tsuyoshi Yodogawa
 
 Tecnologias utilizadas:
 
+Para:
 
-- Configuração do projeto:	Camunda Initializr (start.camunda.com)
-- Camunda Platform:		7.16
-- Bancos de dados:		H2 Database
-- JDK:				versão 11
-- Sistema de build:		Maven 4.0.0
-- Gerenciador de dependências:	Maven 4.0.0
-	- Dependências/módulos utilizados
-		- Webapps
-		- 
+- ProcessServer
+
+	- Configuração do projeto:	Camunda Initializr (start.camunda.com)
+	- Camunda Platform:		7.16
+	- Bancos de dados:		H2 Database
+	- JDK:				versão 11
+	- Sistema de build:		Maven 4.0.0
+	- Gerenciador de dependências:	Maven 4.0.0
+
+
+
+- Client
+
+	- Configuração do projeto: Spring Initializr (start.spring.io)
+	- 
+
+
+
+
 
