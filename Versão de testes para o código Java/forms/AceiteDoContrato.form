@@ -7,7 +7,7 @@
       "id": "Field_1kv8oz7",
       "key": "aceiteDoContrato",
       "validate": {
-        "regularExpressionPattern": "Aceito|Negado"
+        "regularExpressionPattern": "Aceito|Rejeita"
       }
     }
   ],
