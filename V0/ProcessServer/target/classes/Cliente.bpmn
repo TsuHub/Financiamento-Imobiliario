@@ -140,7 +140,7 @@
     <bpmn:intermediateThrowEvent id="Event_1lclagh" name="Enviar solicitação do financiamento">
       <bpmn:incoming>Flow_17slzth</bpmn:incoming>
       <bpmn:outgoing>Flow_1yjzwyp</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_07slkkg" messageRef="Message_1a9m9rs" camunda:class="" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_07slkkg" messageRef="Message_1a9m9rs" camunda:class="src/main/java/org/usp/each/gpn/workflow/request_way/TreatmentWithBank.java" />
     </bpmn:intermediateThrowEvent>
     <bpmn:intermediateThrowEvent id="Event_0oe8c31" name="Enviar solicitação do financiamento">
       <bpmn:incoming>Flow_1s0jrmn</bpmn:incoming>

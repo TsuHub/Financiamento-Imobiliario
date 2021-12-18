@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 2,
+  "components": [
+    {
+      "label": "Valor solicitado pelo cliente está dentro do limite aceito pela corretora?",
+      "type": "textfield",
+      "id": "Field_12y7vqc",
+      "key": "ValorLimite",
+      "description": "Entradas aceitas: \"Sim\" para solicitações abaixo de R$50.000 e \"Não\" para solicitações acima de R$50.000",
+      "validate": {
+        "regularExpressionPattern": "Sim|Não"
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_1p0ij4e"
+}

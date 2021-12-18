@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 2,
+  "components": [
+    {
+      "values": [
+        {
+          "label": "Ótimo",
+          "value": "Ótimo"
+        },
+        {
+          "label": "Bom",
+          "value": "Bom"
+        },
+        {
+          "label": "Ruim",
+          "value": "Ruim"
+        }
+      ],
+      "label": "Qual a condição do imóvel",
+      "type": "select",
+      "id": "Field_0bqd2tt",
+      "key": "field_0ib0w7i"
+    },
+    {
+      "label": "Preço do imóvel",
+      "type": "number",
+      "id": "Field_1xq8si1",
+      "key": "field_01sej9c",
+      "description": "O valor pelo qual o imóvel está sendo vendido."
+    }
+  ],
+  "type": "default",
+  "id": "Form_1ek1hiz"
+}
