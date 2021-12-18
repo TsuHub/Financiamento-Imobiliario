@@ -8,11 +8,11 @@
 		<version>2.6.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.usp.each.gpn</groupId>
-	<artifactId>ClientFinancingRequest</artifactId>
+	<groupId>com.financingrequest</groupId>
+	<artifactId>FinancingRequest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ClientFinancingRequest</name>
-	<description>Project for financing request</description>
+	<name>FinancingRequest</name>
+	<description>Immobile Financing Request</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>

@@ -1,10 +1,10 @@
-package com.usp.each.gpn.ClientFinancingRequest;
+package com.financingrequest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ClientFinancingRequestApplicationTests {
+class FinancingRequestApplicationTests {
 
 	@Test
 	void contextLoads() {

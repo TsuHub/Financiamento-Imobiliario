@@ -24,20 +24,20 @@ Para:
 
 - ProcessServer
 
-	- Configuração do projeto:	Camunda Initializr (start.camunda.com)
-	- Camunda Platform:		7.16
-	- Bancos de dados:		H2 Database
-	- JDK:				versão 11
-	- Sistema de build:		Maven 4.0.0
+	- Configuração do projeto:		Camunda Initializr (start.camunda.com)
+	- Camunda Platform:				7.16
+	- Bancos de dados:				H2 Database
+	- JDK:							versão 11.0.12
+	- Sistema de build:				Maven 4.0.0
 	- Gerenciador de dependências:	Maven 4.0.0
-
-
 
 - Client
 
 	- Configuração do projeto: Spring Initializr (start.spring.io)
-	- 
-
+	- Spring Boot:					versão 2.6.1
+	- JDK:							versão 11.0.12
+	- Sistema de build:				Maven 4.0.0
+	- Gerenciador de dependências:	Maven 4.0.0
 
 
 

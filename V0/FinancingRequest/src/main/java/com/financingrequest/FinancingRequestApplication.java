@@ -1,12 +1,13 @@
-package com.usp.each.gpn.ClientFinancingRequest;
+package com.financingrequest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ClientFinancingRequestApplication
-{
+public class FinancingRequestApplication {
+
 	public static void main(String[] args) {
-		SpringApplication.run(ClientFinancingRequestApplication.class, args);
+		SpringApplication.run(FinancingRequestApplication.class, args);
 	}
+
 }
