@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 2,
+  "components": [
+    {
+      "label": "Registro de solicitação",
+      "type": "textfield",
+      "id": "Field_1c6xh3i",
+      "key": "qualquerCoisa"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0z01rbe"
+}

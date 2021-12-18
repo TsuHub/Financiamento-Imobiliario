@@ -1,0 +1,10 @@
+https://docs.camunda.org/get-started/java-process-app/service-task/
+
+https://docs.camunda.org/get-started/quick-start/
+
+https://docs.camunda.org/get-started/quick-start/service-task/#configure-the-service-task
+
+https://docs.camunda.org/manual/latest/user-guide/process-engine/external-tasks/
+
+https://docs.camunda.org/manual/latest/user-guide/process-engine/delegation-code/#java-delegate
+

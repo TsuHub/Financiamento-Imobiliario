@@ -1,0 +1,35 @@
+==================================================================================================================================================
+
+OBS: Destacar no relatório as palavras que estão em aspas simples.
+
+==================================================================================================================================================
+==================================================================================================================================================
+
+
+
+==================================================================================================================================================
+==================================================================================================================================================
+
+Fontes:
+
+https://docs.camunda.org/get-started/quick-start/service-task/#configure-the-service-task		*
+https://docs.camunda.org/manual/latest/user-guide/process-engine/external-tasks/			**
+
+(*)Existem diferentes formas de executar tarefas de serviços com o Camunda Platform:
+
+(**)
+1. Internal Service tasks: Que faz a chamada do código juntamente com o processo do modelo BPMN, de forma síncrona. Bastando apenas ter sido feito o deploy de ambos.
+
+2. External tasks: Fornece uma lista de atividades que pode ser consultada pelos workers (programas que executam alguma atividade).
+
+==================================================================================================================================================
+
+Usamos a primeira opção, i.e., quando o código é implementado como 'Delegation Code' ou um 'Script'.
+
+==================================================================================================================================================
+
+Delegação com Java
+
+Para a implementação do código, a classe responsável deve implementar (especificamente o método 'execute(DelegateExecution dE)') a interface JavaDelegate, encontrada na lib 'org.camunda.bpm.engine.delegate'. Dado um processo que será executado fará a chamada do método (seu código) e a atividade irá ficar na forma padrão do BPMN 2.0.
+
+==================================================================================================================================================

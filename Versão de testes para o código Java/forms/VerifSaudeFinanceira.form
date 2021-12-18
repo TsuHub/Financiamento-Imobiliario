@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "components": [
+    {
+      "label": "Faturamento",
+      "type": "textfield",
+      "id": "Field_05c90gx",
+      "key": "field_0fe3bqe",
+      "description": "Indicador de risco da pessoa física ou jurídica.",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Recebimentos",
+      "type": "textfield",
+      "id": "Field_0gkqtyr",
+      "key": "field_0uuqj41",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Lucros",
+      "type": "textfield",
+      "id": "Field_0h77h3d",
+      "key": "field_03edt46"
+    },
+    {
+      "label": "Custos fixos",
+      "type": "textfield",
+      "id": "Field_0ri8ukr",
+      "key": "field_1gurzbr"
+    }
+  ],
+  "type": "default",
+  "id": "VerificarSaudeFinanceira"
+}
