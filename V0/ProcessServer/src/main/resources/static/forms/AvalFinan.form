@@ -4,8 +4,8 @@
     {
       "label": "O cliente está apto para receber o financiamento da corretora ",
       "type": "textfield",
-      "id": "Field_090dmgg",
-      "key": "AvalFinaceiro",
+      "id": "Field_132brwy",
+      "key": "AvalFinan",
       "description": "Entradas aceitas: \"Aprovado\" para resultados aprovados e \"Negado\" para resultados negados",
       "validate": {
         "regularExpressionPattern": "Aprovado|Negado"
@@ -13,5 +13,5 @@
     }
   ],
   "type": "default",
-  "id": "Form_173k76v"
+  "id": "Form_0zixdrv"
 }
