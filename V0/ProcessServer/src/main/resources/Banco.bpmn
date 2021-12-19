@@ -67,7 +67,7 @@
     </bpmn:endEvent>
     <bpmn:endEvent id="Event_1ipbiu2" name="Notificação do cadastro">
       <bpmn:incoming>Flow_0lhcwff</bpmn:incoming>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_19sgd8b" messageRef="Message_039njhf" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_19sgd8b" messageRef="Message_039njhf" camunda:class="org.usp.each.gpn.workflow.messages.bank_to_client.NotificationRegister" />
     </bpmn:endEvent>
     <bpmn:exclusiveGateway id="Gateway_11wvgc2">
       <bpmn:incoming>Flow_0yt78cz</bpmn:incoming>
@@ -177,7 +177,7 @@
     <bpmn:intermediateThrowEvent id="Event_01t03d6" name="Envio das minutas dos contratos">
       <bpmn:incoming>Flow_0hp0jwt</bpmn:incoming>
       <bpmn:outgoing>Flow_134h8n1</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_0wvms77" messageRef="Message_1gnz39i" camunda:expression="camunda-forms:deployment:EnvioMinuta.form" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0wvms77" messageRef="Message_1gnz39i" camunda:class="org.usp.each.gpn.workflow.messages.bank_to_client.SubmissionOfContracts" />
     </bpmn:intermediateThrowEvent>
     <bpmn:userTask id="Activity_0wdjg6w" name="Efetuar financiamento">
       <bpmn:incoming>Flow_1gwu8rs</bpmn:incoming>

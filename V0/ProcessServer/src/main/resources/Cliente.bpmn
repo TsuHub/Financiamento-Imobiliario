@@ -11,6 +11,11 @@
       <bpmn:incoming>Flow_1eh9u95</bpmn:incoming>
       <bpmn:messageEventDefinition id="MessageEventDefinition_1igkacw" messageRef="Message_19lgate" />
     </bpmn:intermediateThrowEvent>
+    <bpmn:intermediateCatchEvent id="Event_180xsb4" name="Financiamento aprovado">
+      <bpmn:incoming>Flow_0bp23ag</bpmn:incoming>
+      <bpmn:outgoing>Flow_1q7szva</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1ynuvwh" messageRef="Message_0tmni8z" />
+    </bpmn:intermediateCatchEvent>
     <bpmn:intermediateCatchEvent id="Event_1nipbfg" name="Recebimento das propostas">
       <bpmn:incoming>Flow_02rp4bw</bpmn:incoming>
       <bpmn:outgoing>Flow_0jl3ohg</bpmn:outgoing>
@@ -42,7 +47,7 @@
       <bpmn:incoming>Flow_0z3ksal</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:intermediateCatchEvent id="Event_1dpo0y5" name="Cliente recebe notificação de cadastro bancário">
-      <bpmn:incoming>Flow_0bp23ag</bpmn:incoming>
+      <bpmn:incoming>Flow_1q7szva</bpmn:incoming>
       <bpmn:outgoing>Flow_0z3ksal</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_1cqaqsh" messageRef="Message_1gvvo53" />
     </bpmn:intermediateCatchEvent>
@@ -94,6 +99,7 @@
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{escolhaCorretoraBanco == 'Seguir-Banco'}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_1ahaa2d" sourceRef="Event_0trt600" targetRef="Activity_116hogm" />
+    <bpmn:sequenceFlow id="Flow_1q7szva" sourceRef="Event_180xsb4" targetRef="Event_1dpo0y5" />
     <bpmn:sequenceFlow id="Flow_0z3ksal" sourceRef="Event_1dpo0y5" targetRef="Event_1nwrg57" />
     <bpmn:sequenceFlow id="Flow_1wd35l4" sourceRef="Activity_116hogm" targetRef="Gateway_0v2fwka" />
     <bpmn:sequenceFlow id="Flow_156ru5j" name="Cliente rejeita contratos" sourceRef="Gateway_0v2fwka" targetRef="Event_05g946l">
@@ -101,7 +107,7 @@
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_1hbbnb8" sourceRef="Gateway_047kvat" targetRef="Event_0xi4djb" />
     <bpmn:sequenceFlow id="Flow_02rp4bw" sourceRef="Gateway_047kvat" targetRef="Event_1nipbfg" />
-    <bpmn:sequenceFlow id="Flow_0bp23ag" sourceRef="Gateway_047kvat" targetRef="Event_1dpo0y5" />
+    <bpmn:sequenceFlow id="Flow_0bp23ag" sourceRef="Gateway_047kvat" targetRef="Event_180xsb4" />
     <bpmn:sequenceFlow id="Flow_1u0z9li" sourceRef="Event_0xi4djb" targetRef="Gateway_00neq7h" />
     <bpmn:sequenceFlow id="Flow_0jl3ohg" sourceRef="Event_1nipbfg" targetRef="Gateway_00neq7h" />
     <bpmn:sequenceFlow id="Flow_0pqmgay" sourceRef="Gateway_00neq7h" targetRef="Activity_1126gr8" />
@@ -134,12 +140,12 @@
     <bpmn:intermediateThrowEvent id="Event_1lclagh" name="Enviar solicitação do financiamento">
       <bpmn:incoming>Flow_17slzth</bpmn:incoming>
       <bpmn:outgoing>Flow_1yjzwyp</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_07slkkg" messageRef="Message_1a9m9rs" camunda:class="org.usp.each.gpn.workflow.messages.request_way.TreatmentWithBank" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_07slkkg" messageRef="Message_1a9m9rs" camunda:class="org.usp.each.gpn.workflow.messages.client_to_bank.TreatmentWithBank" />
     </bpmn:intermediateThrowEvent>
     <bpmn:intermediateThrowEvent id="Event_0oe8c31" name="Enviar solicitação do financiamento">
       <bpmn:incoming>Flow_1s0jrmn</bpmn:incoming>
       <bpmn:outgoing>Flow_092d9n5</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_04ju7bo" messageRef="Message_0eb6ffj" camunda:class="org.usp.each.gpn.workflow.messages.request_way.TreatmentWithBroker" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_04ju7bo" messageRef="Message_0eb6ffj" camunda:class="org.usp.each.gpn.workflow.messages.clint_to_broker.TreatmentWithBroker" />
     </bpmn:intermediateThrowEvent>
     <bpmn:exclusiveGateway id="Gateway_0bzkmu1">
       <bpmn:incoming>Flow_092d9n5</bpmn:incoming>
@@ -231,7 +237,7 @@
       <bpmndi:BPMNEdge id="Flow_0bp23ag_di" bpmnElement="Flow_0bp23ag">
         <di:waypoint x="2970" y="389" />
         <di:waypoint x="2970" y="549" />
-        <di:waypoint x="4453" y="549" />
+        <di:waypoint x="3835" y="549" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_02rp4bw_di" bpmnElement="Flow_02rp4bw">
         <di:waypoint x="2970" y="389" />
@@ -257,6 +263,10 @@
       <bpmndi:BPMNEdge id="Flow_0z3ksal_di" bpmnElement="Flow_0z3ksal">
         <di:waypoint x="4489" y="549" />
         <di:waypoint x="4603" y="549" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1q7szva_di" bpmnElement="Flow_1q7szva">
+        <di:waypoint x="3871" y="549" />
+        <di:waypoint x="4453" y="549" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1ahaa2d_di" bpmnElement="Flow_1ahaa2d">
         <di:waypoint x="4393" y="289" />
@@ -325,6 +335,12 @@
         <dc:Bounds x="4258" y="411" width="36" height="36" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="4245" y="453" width="70" height="53" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_180xsb4_di" bpmnElement="Event_180xsb4">
+        <dc:Bounds x="3835" y="531" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3817" y="501" width="73" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1nipbfg_di" bpmnElement="Event_1nipbfg">
