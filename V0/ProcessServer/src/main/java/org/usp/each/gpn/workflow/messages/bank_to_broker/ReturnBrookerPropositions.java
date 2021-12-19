@@ -1,15 +1,15 @@
-package org.usp.each.gpn.workflow.broker_to_bank;
+package org.usp.each.gpn.workflow.messages.bank_to_broker;
 
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
 
-public class SenderBrokerToBank implements JavaDelegate
+public class ReturnBrookerPropositions implements JavaDelegate
 {
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
 
         delegateExecution.getProcessEngineServices().getRuntimeService()
-                .createMessageCorrelation("EnvioCorretoraBanco")
+                .createMessageCorrelation("PropostaCorretora")
                 .correlate();
     }
 }

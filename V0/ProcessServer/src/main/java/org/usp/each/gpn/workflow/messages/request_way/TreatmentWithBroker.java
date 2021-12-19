@@ -1,4 +1,4 @@
-package org.usp.each.gpn.workflow.request_way;
+package org.usp.each.gpn.workflow.messages.request_way;
 
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
