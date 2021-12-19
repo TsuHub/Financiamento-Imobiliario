@@ -82,7 +82,7 @@
     <bpmn:intermediateThrowEvent id="Event_02dj03a" name="Envio das propostas">
       <bpmn:incoming>Flow_1tyh3ge</bpmn:incoming>
       <bpmn:outgoing>Flow_0yt78cz</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_0f88b6a" messageRef="Message_19030jc" camunda:class="org.usp.each.gpn.workflow.messages.bank_to_broker.SUbmissionOfProposals" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0f88b6a" messageRef="Message_19030jc" camunda:class="org.usp.each.gpn.workflow.messages.bank_to_broker.SubmissionOfProposals" />
     </bpmn:intermediateThrowEvent>
     <bpmn:eventBasedGateway id="Gateway_0lw326p">
       <bpmn:incoming>Flow_134h8n1</bpmn:incoming>

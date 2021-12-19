@@ -324,7 +324,7 @@
       <bpmndi:BPMNShape id="Event_0g7uu19_di" bpmnElement="Event_0g7uu19">
         <dc:Bounds x="4258" y="411" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="4295" y="402" width="70" height="53" />
+          <dc:Bounds x="4245" y="453" width="70" height="53" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1nipbfg_di" bpmnElement="Event_1nipbfg">
@@ -420,7 +420,7 @@
       <bpmndi:BPMNShape id="Event_1lclagh_di" bpmnElement="Event_1lclagh">
         <dc:Bounds x="2072" y="251" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="2112" y="290" width="86" height="27" />
+          <dc:Bounds x="2067" y="290" width="86" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_0oe8c31_di" bpmnElement="Event_0oe8c31">
