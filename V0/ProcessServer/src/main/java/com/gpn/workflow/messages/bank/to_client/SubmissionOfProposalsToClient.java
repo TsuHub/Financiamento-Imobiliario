@@ -1,4 +1,4 @@
-package org.usp.each.gpn.workflow.messages.bank.to_client;
+package com.gpn.workflow.messages.bank.to_client;
 
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;

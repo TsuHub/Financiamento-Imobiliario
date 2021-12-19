@@ -22,7 +22,7 @@
     <bpmn:intermediateThrowEvent id="Event_1ixawvj" name="Repasse das três porpostas para&#10;o cliente">
       <bpmn:incoming>Flow_1xhosnx</bpmn:incoming>
       <bpmn:outgoing>Flow_04a7sq6</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_0dwb895" messageRef="Message_0djl0qn" camunda:class="org.usp.each.gpn.workflow.messages.broker.to_client.TransferProposalsToClient" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0dwb895" messageRef="Message_0djl0qn" camunda:class="com.gpn.workflow.messages.broker.to_client.TransferProposalsToClient" />
     </bpmn:intermediateThrowEvent>
     <bpmn:intermediateCatchEvent id="Event_09v62ry" name="Recebimento&#10;da proposta escolhida">
       <bpmn:incoming>Flow_04a7sq6</bpmn:incoming>
@@ -31,11 +31,11 @@
     </bpmn:intermediateCatchEvent>
     <bpmn:endEvent id="Event_01mz31q" name="Repasse da propostas">
       <bpmn:incoming>Flow_182foyd</bpmn:incoming>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_1ywmwk2" messageRef="Message_188p45c" camunda:class="org.usp.each.gpn.workflow.messages.broker.to_bank.TransferProposalsToBank" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1ywmwk2" messageRef="Message_188p45c" camunda:class="com.gpn.workflow.messages.broker.to_bank.TransferProposalsToBank" />
     </bpmn:endEvent>
     <bpmn:endEvent id="Event_0lki1j5" name="Envio de informações do financiamento para o banco">
       <bpmn:incoming>Flow_03zweis</bpmn:incoming>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_0hg70k9" messageRef="Message_010mtz2" camunda:class="org.usp.each.gpn.workflow.messages.broker.to_bank.SenderBrokerToBank" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0hg70k9" messageRef="Message_010mtz2" camunda:class="com.gpn.workflow.messages.broker.to_bank.SenderBrokerToBank" />
     </bpmn:endEvent>
     <bpmn:userTask id="Activity_1o90frc" name="Checar solicitação" camunda:formKey="camunda-forms:deployment:ValorLimite.form">
       <bpmn:incoming>Flow_1hq7xzw</bpmn:incoming>
@@ -71,7 +71,7 @@
     <bpmn:sequenceFlow id="Flow_1hq7xzw" sourceRef="Event_1cwxyhw" targetRef="Activity_1o90frc" />
     <bpmn:endEvent id="Event_0o00nw3" name="Solicitação indeferida">
       <bpmn:incoming>Flow_0sfuyc1</bpmn:incoming>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_1ffver2" messageRef="Message_1lf17o9" camunda:class="org.usp.each.gpn.workflow.messages.broker.to_client.DeniedSolicitation" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1ffver2" messageRef="Message_1lf17o9" camunda:class="com.gpn.workflow.messages.broker.to_client.DeniedSolicitation" />
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_1mgyidb" name="Valor acima do limite" sourceRef="Gateway_0ug8hzo" targetRef="Event_1v7alx2">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{ValorLimite == 'Não'}</bpmn:conditionExpression>
@@ -80,16 +80,16 @@
     <bpmn:intermediateThrowEvent id="Event_1v7alx2" name="Enviar solicitação ao banco">
       <bpmn:incoming>Flow_1mgyidb</bpmn:incoming>
       <bpmn:outgoing>Flow_02izfm1</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_1o1e2t8" messageRef="Message_1uxhnyq" camunda:class="org.usp.each.gpn.workflow.messages.broker.to_bank.SendSolicitation" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1o1e2t8" messageRef="Message_1uxhnyq" camunda:class="com.gpn.workflow.messages.broker.to_bank.TransferSolicitationToBank" />
     </bpmn:intermediateThrowEvent>
   </bpmn:process>
   <bpmn:message id="Message_0qtnjgy" name="TratamentoCorretora" />
   <bpmn:message id="Message_06g9jrt" name="PropostaCorretora" />
-  <bpmn:message id="Message_0djl0qn" name="RepasseCliente" />
-  <bpmn:message id="Message_1gq3ken" name="NotificaCorretora" />
-  <bpmn:message id="Message_188p45c" name="RepasseBanco" />
-  <bpmn:message id="Message_010mtz2" name="EnvioCorretoraBanco" />
-  <bpmn:message id="Message_1lf17o9" name="FinanciamentoNegado" />
+  <bpmn:message id="Message_0djl0qn" name="CorretoraRepasseCliente" />
+  <bpmn:message id="Message_1gq3ken" name="ClientePropostaEscolhidaCorretora" />
+  <bpmn:message id="Message_188p45c" name="CorretoraRepasseBanco" />
+  <bpmn:message id="Message_010mtz2" name="CorretoraEnviaBanco" />
+  <bpmn:message id="Message_1lf17o9" name="CorretoraFinanciamentoNegado" />
   <bpmn:message id="Message_1re8glh" />
   <bpmn:message id="Message_1uxhnyq" name="TratamentoBanco" />
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">

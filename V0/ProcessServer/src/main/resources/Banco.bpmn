@@ -67,7 +67,7 @@
     </bpmn:endEvent>
     <bpmn:endEvent id="Event_1ipbiu2" name="Notificação do cadastro">
       <bpmn:incoming>Flow_0lhcwff</bpmn:incoming>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_19sgd8b" messageRef="Message_039njhf" camunda:class="org.usp.each.gpn.workflow.messages.bank.to_client.NotificationRegister" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_19sgd8b" messageRef="Message_039njhf" camunda:class="NotificationRegister" />
     </bpmn:endEvent>
     <bpmn:exclusiveGateway id="Gateway_11wvgc2">
       <bpmn:incoming>Flow_0yt78cz</bpmn:incoming>
@@ -77,12 +77,12 @@
     <bpmn:intermediateThrowEvent id="Event_0fcljww" name="Envio das propostas">
       <bpmn:incoming>Flow_1hjarf7</bpmn:incoming>
       <bpmn:outgoing>Flow_0mytejd</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_1cy7wz8" messageRef="Message_0de81pc" camunda:class="org.usp.each.gpn.workflow.messages.bank.to_client.SubmissionOfProposalsToClient" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1cy7wz8" messageRef="Message_0de81pc" camunda:class="SubmissionOfProposalsToClient" />
     </bpmn:intermediateThrowEvent>
     <bpmn:intermediateThrowEvent id="Event_02dj03a" name="Envio das propostas">
       <bpmn:incoming>Flow_1tyh3ge</bpmn:incoming>
       <bpmn:outgoing>Flow_0yt78cz</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_0f88b6a" messageRef="Message_19030jc" camunda:class="org.usp.each.gpn.workflow.messages.bank.to_broker.SubmissionOfProposalsToBroker" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0f88b6a" messageRef="Message_19030jc" camunda:class="SubmissionOfProposalsToBroker" />
     </bpmn:intermediateThrowEvent>
     <bpmn:eventBasedGateway id="Gateway_0lw326p">
       <bpmn:incoming>Flow_134h8n1</bpmn:incoming>
@@ -111,7 +111,7 @@
     </bpmn:exclusiveGateway>
     <bpmn:endEvent id="Event_1v9idlq" name="Negação do resultado de financiamento">
       <bpmn:incoming>Flow_19kte2j</bpmn:incoming>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_0gxoj5k" messageRef="Message_121gu6c" camunda:class="org.usp.each.gpn.workflow.messages.bank.to_client.DenialOfResult" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0gxoj5k" messageRef="Message_121gu6c" camunda:class="DenialOfResult" />
     </bpmn:endEvent>
     <bpmn:parallelGateway id="Gateway_1obqwov">
       <bpmn:incoming>Flow_12i5o9m</bpmn:incoming>
@@ -177,7 +177,7 @@
     <bpmn:intermediateThrowEvent id="Event_01t03d6" name="Envio das minutas dos contratos">
       <bpmn:incoming>Flow_0hp0jwt</bpmn:incoming>
       <bpmn:outgoing>Flow_134h8n1</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_0wvms77" messageRef="Message_1gnz39i" camunda:class="org.usp.each.gpn.workflow.messages.bank.to_client.SubmissionOfContracts" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0wvms77" messageRef="Message_1gnz39i" camunda:class="SubmissionOfContracts" />
     </bpmn:intermediateThrowEvent>
     <bpmn:userTask id="Activity_0wdjg6w" name="Efetuar financiamento">
       <bpmn:incoming>Flow_1gwu8rs</bpmn:incoming>
@@ -288,13 +288,13 @@
   <bpmn:message id="Message_039njhf" name="NotificaCliente" />
   <bpmn:message id="Message_0de81pc" name="PropostaCliente" />
   <bpmn:message id="Message_19030jc" name="PropostaCorretora" />
-  <bpmn:message id="Message_0k5ksyv" name="PropostaEscolhida" />
+  <bpmn:message id="Message_0k5ksyv" name="ClientePropostaEscolhidaBanco" />
   <bpmn:message id="Message_121gu6c" name="FinanciamentoNegado" />
-  <bpmn:message id="Message_084vexv" name="EnvioCorretoraBanco" />
+  <bpmn:message id="Message_084vexv" name="CorretoraEnviaBanco" />
   <bpmn:message id="Message_12ycix7" name="Message_2pp7omb" />
   <bpmn:message id="Message_1gnz39i" name="EnvioMinutas" />
-  <bpmn:message id="Message_1emx8nk" name="Message_00r5719" />
-  <bpmn:message id="Message_1ih1ib4" name="Message_0sockg3" />
+  <bpmn:message id="Message_1emx8nk" name="ClienteAceitaPropostaBanco" />
+  <bpmn:message id="Message_1ih1ib4" name="ClienteRejeitaPropostaBanco" />
   <bpmn:message id="Message_11zyyif" name="TratamentoBanco" />
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0x1qkdv">

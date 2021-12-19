@@ -1,15 +1,15 @@
-package org.usp.each.gpn.workflow.messages.client.to_broker;
+package com.gpn.workflow.messages.broker.to_client;
 
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
 
-public class TreatmentWithBroker implements JavaDelegate
+public class TransferProposalsToClient implements JavaDelegate
 {
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
 
         delegateExecution.getProcessEngineServices().getRuntimeService()
-                .createMessageCorrelation("TratamentoCorretora")
+                .createMessageCorrelation("CorretoraRepasseCliente")
                 .correlate();
     }
 }
