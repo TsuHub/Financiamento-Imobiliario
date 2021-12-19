@@ -9,7 +9,7 @@ public class SubmissionOfContracts implements JavaDelegate
     public void execute(DelegateExecution delegateExecution) throws Exception
     {
         delegateExecution.getProcessEngineServices().getRuntimeService()
-                .createMessageCorrelation("EnvioMinutas")
+                .createMessageCorrelation("BancoEnvioMinutas")
                 .correlate();
     }
 }

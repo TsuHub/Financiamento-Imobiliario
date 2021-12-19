@@ -9,7 +9,7 @@ public class NotificationRegister implements JavaDelegate
     public void execute(DelegateExecution delegateExecution) throws Exception {
 
         delegateExecution.getProcessEngineServices().getRuntimeService()
-                .createMessageCorrelation("NotificaCliente")
+                .createMessageCorrelation("BancoNotificaCadastroCliente")
                 .correlate();
     }
 }

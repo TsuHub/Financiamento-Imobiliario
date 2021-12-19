@@ -167,17 +167,17 @@
     </bpmn:startEvent>
   </bpmn:process>
   <bpmn:message id="Message_19lgate" name="ClientePropostaEscolhidaCorretora" />
-  <bpmn:message id="Message_0tmni8z" name="Message_3fcdj3j" />
+  <bpmn:message id="Message_0tmni8z" name="CorretoraNotificaAprovacaoCliente" />
   <bpmn:message id="Message_1ak10td" name="CorretoraRepasseCliente" />
-  <bpmn:message id="Message_0t8j60w" name="PropostaCliente" />
-  <bpmn:message id="Message_1gvvo53" name="Message_3ocvnne" />
-  <bpmn:message id="Message_12fjdc2" name="ClientePropostaEscolhidaBanco" />
-  <bpmn:message id="Message_0qwa75y" name="CorretoraFinanciamentoNegado" />
+  <bpmn:message id="Message_0t8j60w" name="BancoEnvioPropostasCliente" />
+  <bpmn:message id="Message_1gvvo53" name="BancoNotificaCadastroCliente" />
+  <bpmn:message id="Message_12fjdc2" name="PropostaEscolhidaBanco" />
+  <bpmn:message id="Message_0qwa75y" name="FinanciamentoNegado" />
   <bpmn:message id="Message_0jn774h" name="ClienteRejeitaPropostaBanco" />
   <bpmn:message id="Message_0xgqtp0" name="ClienteAceitaPropostaBanco" />
   <bpmn:message id="Message_0eb6ffj" name="TratamentoCorretora" />
   <bpmn:message id="Message_1a9m9rs" name="TratamentoBanco" />
-  <bpmn:message id="Message_0122aki" name="EnvioMinutas" />
+  <bpmn:message id="Message_0122aki" name="BancoEnvioMinutas" />
   <bpmn:message id="Message_1y6yred" />
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0f1nutt">

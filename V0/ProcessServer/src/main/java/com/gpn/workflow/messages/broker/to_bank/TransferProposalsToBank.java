@@ -9,7 +9,7 @@ public class TransferProposalsToBank implements JavaDelegate
     public void execute(DelegateExecution delegateExecution) throws Exception {
 
         delegateExecution.getProcessEngineServices().getRuntimeService()
-                .createMessageCorrelation("CorretoraRepasseBanco")
+                .createMessageCorrelation("PropostaEscolhidaBanco")
                 .correlate();
     }
 }
