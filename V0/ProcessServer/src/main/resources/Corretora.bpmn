@@ -35,7 +35,7 @@
     </bpmn:endEvent>
     <bpmn:endEvent id="Event_0lki1j5" name="Envio de informações do financiamento para o banco">
       <bpmn:incoming>Flow_03zweis</bpmn:incoming>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_0hg70k9" messageRef="Message_010mtz2" camunda:class="org.usp.each.gpn.workflow.messages.broker_to_bank.SenderBrokerToBank" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0hg70k9" messageRef="Message_010mtz2" camunda:class="org.usp.each.gpn.workflow.broker_to_bank.SenderBrokerToBank" />
     </bpmn:endEvent>
     <bpmn:userTask id="Activity_1o90frc" name="Checar solicitação" camunda:formKey="camunda-forms:deployment:ValorLimite.form">
       <bpmn:incoming>Flow_1hq7xzw</bpmn:incoming>
@@ -79,7 +79,7 @@
     <bpmn:sequenceFlow id="Flow_1hq7xzw" sourceRef="Event_1cwxyhw" targetRef="Activity_1o90frc" />
     <bpmn:endEvent id="Event_0o00nw3" name="Solicitação indeferida">
       <bpmn:incoming>Flow_0sfuyc1</bpmn:incoming>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_1ffver2" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1ffver2" camunda:class="org.usp.each.gpn.workflow.messages.broker_to_client.DeniedSolicitation" />
     </bpmn:endEvent>
   </bpmn:process>
   <bpmn:message id="Message_0qtnjgy" name="TratamentoCorretora" />
