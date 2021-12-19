@@ -1,6 +1,6 @@
 package org.usp.each.gpn.workflow.messages.bank_to_broker;
 
-// Teste
+// Alteração
 
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
