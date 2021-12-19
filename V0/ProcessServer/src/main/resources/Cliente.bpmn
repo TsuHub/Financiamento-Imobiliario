@@ -140,12 +140,12 @@
     <bpmn:intermediateThrowEvent id="Event_1lclagh" name="Enviar solicitação do financiamento">
       <bpmn:incoming>Flow_17slzth</bpmn:incoming>
       <bpmn:outgoing>Flow_1yjzwyp</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_07slkkg" messageRef="Message_1a9m9rs" camunda:class="org.usp.each.gpn.workflow.messages.client_to_bank.TreatmentWithBank" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_07slkkg" messageRef="Message_1a9m9rs" camunda:class="org.usp.each.gpn.workflow.messages.client.to_bank.TreatmentWithBank" />
     </bpmn:intermediateThrowEvent>
     <bpmn:intermediateThrowEvent id="Event_0oe8c31" name="Enviar solicitação do financiamento">
       <bpmn:incoming>Flow_1s0jrmn</bpmn:incoming>
       <bpmn:outgoing>Flow_092d9n5</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_04ju7bo" messageRef="Message_0eb6ffj" camunda:class="org.usp.each.gpn.workflow.messages.clint_to_broker.TreatmentWithBroker" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_04ju7bo" messageRef="Message_0eb6ffj" camunda:class="org.usp.each.gpn.workflow.messages.client.to_broker.TreatmentWithBroker" />
     </bpmn:intermediateThrowEvent>
     <bpmn:exclusiveGateway id="Gateway_0bzkmu1">
       <bpmn:incoming>Flow_092d9n5</bpmn:incoming>

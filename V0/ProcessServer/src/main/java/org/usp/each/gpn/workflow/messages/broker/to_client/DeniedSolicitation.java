@@ -1,15 +1,15 @@
-package org.usp.each.gpn.workflow.messages.clint_to_broker;
+package org.usp.each.gpn.workflow.messages.broker.to_client;
 
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
 
-public class TreatmentWithBroker implements JavaDelegate
+public class DeniedSolicitation implements JavaDelegate
 {
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
 
         delegateExecution.getProcessEngineServices().getRuntimeService()
-                .createMessageCorrelation("TratamentoCorretora")
+                .createMessageCorrelation("FinanciamentoNegado")
                 .correlate();
     }
 }
