@@ -168,7 +168,7 @@
   </bpmn:process>
   <bpmn:message id="Message_19lgate" name="PropostaEscolhida" />
   <bpmn:message id="Message_0tmni8z" name="Message_3fcdj3j" />
-  <bpmn:message id="Message_1ak10td" name="PropostaCorretora" />
+  <bpmn:message id="Message_1ak10td" name="RepasseCliente" />
   <bpmn:message id="Message_0t8j60w" name="PropostaCliente" />
   <bpmn:message id="Message_1gvvo53" name="Message_3ocvnne" />
   <bpmn:message id="Message_12fjdc2" name="PropostaEscolhida" />
