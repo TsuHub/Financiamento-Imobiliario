@@ -1,13 +1,13 @@
 package com.gpn.workflow.form;
 
-public class ClientRegisterForm
+public class ClientData
 {
     private String requestDate;
     private String requesterName;
     private String financingValue;
     private String income;
 
-    public ClientRegisterForm(String requestDate, String requesterName, String financingValue, String income) {
+    public ClientData(String requestDate, String requesterName, String financingValue, String income) {
         this.requestDate = requestDate;
         this.requesterName = requesterName;
         this.financingValue = financingValue;

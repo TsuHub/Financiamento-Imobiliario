@@ -91,7 +91,7 @@
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_1k5oip3" sourceRef="Gateway_0bzkmu1" targetRef="Gateway_047kvat" />
     <bpmn:exclusiveGateway id="Gateway_0qol0yd">
-      <bpmn:incoming>Flow_0ni3xl4</bpmn:incoming>
+      <bpmn:incoming>Flow_1g8l7hv</bpmn:incoming>
       <bpmn:outgoing>Flow_17slzth</bpmn:outgoing>
       <bpmn:outgoing>Flow_1s0jrmn</bpmn:outgoing>
     </bpmn:exclusiveGateway>
@@ -110,7 +110,7 @@
       <bpmn:incoming>Flow_1yjzwyp</bpmn:incoming>
       <bpmn:outgoing>Flow_1k5oip3</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:sequenceFlow id="Flow_0ni3xl4" sourceRef="Activity_13bugsg" targetRef="Gateway_0qol0yd" />
+    <bpmn:sequenceFlow id="Flow_0ni3xl4" sourceRef="Activity_13bugsg" targetRef="Activity_0p57o0y" />
     <bpmn:sequenceFlow id="Flow_17slzth" name="Tratamento direto com o banco" sourceRef="Gateway_0qol0yd" targetRef="Event_1lclagh">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{EscolhaCanal == 'Banco'}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
@@ -179,6 +179,11 @@
       <bpmn:incoming>Flow_1g48x40</bpmn:incoming>
       <bpmn:outgoing>Flow_0ni3xl4</bpmn:outgoing>
     </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_1g8l7hv" sourceRef="Activity_0p57o0y" targetRef="Gateway_0qol0yd" />
+    <bpmn:serviceTask id="Activity_0p57o0y" name="Enviar dados para o sistema" camunda:class="com.gpn.workflow.form.ClientDataController">
+      <bpmn:incoming>Flow_0ni3xl4</bpmn:incoming>
+      <bpmn:outgoing>Flow_1g8l7hv</bpmn:outgoing>
+    </bpmn:serviceTask>
   </bpmn:process>
   <bpmn:message id="Message_19lgate" name="ClientePropostaEscolhidaCorretora" />
   <bpmn:message id="Message_0tmni8z" name="CorretoraNotificaAprovacaoCliente" />
@@ -248,7 +253,7 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1g48x40_di" bpmnElement="Flow_1g48x40">
         <di:waypoint x="1078" y="368" />
-        <di:waypoint x="1790" y="368" />
+        <di:waypoint x="1520" y="368" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_092d9n5_di" bpmnElement="Flow_092d9n5">
         <di:waypoint x="2138" y="459" />
@@ -277,8 +282,8 @@
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0ni3xl4_di" bpmnElement="Flow_0ni3xl4">
-        <di:waypoint x="1890" y="368" />
-        <di:waypoint x="2005" y="368" />
+        <di:waypoint x="1620" y="368" />
+        <di:waypoint x="1770" y="368" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1k5oip3_di" bpmnElement="Flow_1k5oip3">
         <di:waypoint x="2235" y="368" />
@@ -356,6 +361,10 @@
         <di:waypoint x="2970" y="339" />
         <di:waypoint x="2970" y="251" />
         <di:waypoint x="3228" y="251" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1g8l7hv_di" bpmnElement="Flow_1g8l7hv">
+        <di:waypoint x="1870" y="368" />
+        <di:waypoint x="2005" y="368" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Event_0g7uu19_di" bpmnElement="Event_0g7uu19">
         <dc:Bounds x="4258" y="411" width="36" height="36" />
@@ -490,7 +499,10 @@
         <dc:Bounds x="5040" y="320" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_13bugsg_di" bpmnElement="Activity_13bugsg">
-        <dc:Bounds x="1790" y="328" width="100" height="80" />
+        <dc:Bounds x="1520" y="328" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1sbptx4_di" bpmnElement="Activity_0p57o0y">
+        <dc:Bounds x="1770" y="328" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

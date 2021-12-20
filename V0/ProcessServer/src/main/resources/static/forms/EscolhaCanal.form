@@ -5,7 +5,7 @@
       "label": "Data da solicitação",
       "type": "textfield",
       "id": "Field_01xc1kw",
-      "key": "field_04nyppa",
+      "key": "ECdata",
       "validate": {
         "required": true
       },
@@ -15,7 +15,7 @@
       "label": "Nome do solicitante",
       "type": "textfield",
       "id": "Field_0wsxin2",
-      "key": "field_09daga7",
+      "key": "ECnome",
       "description": "Apenas o primeiro nome",
       "validate": {
         "required": true
@@ -25,7 +25,7 @@
       "label": "Valor do financiamento",
       "type": "textfield",
       "id": "Field_0kmxzdo",
-      "key": "field_1kozu2a",
+      "key": "ECvalor",
       "description": "Ex: 100000.00",
       "validate": {
         "required": true
@@ -35,7 +35,7 @@
       "label": "Rendimentos do solicitante",
       "type": "textfield",
       "id": "Field_0otjy7a",
-      "key": "field_1pkgjpj",
+      "key": "ECrendimentos",
       "description": "Ex: 5000.00"
     },
     {
