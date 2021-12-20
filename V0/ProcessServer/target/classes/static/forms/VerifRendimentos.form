@@ -5,7 +5,7 @@
       "label": "Rendimentos alegados no último ano",
       "type": "number",
       "id": "Field_0gzyqv7",
-      "key": "field_0aenpez",
+      "key": "VRverificaRendimentos",
       "description": "Rendimentos que o usuário alegou possuir no último ano"
     }
   ],

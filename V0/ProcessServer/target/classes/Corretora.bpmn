@@ -54,7 +54,7 @@
     <bpmn:sequenceFlow id="Flow_1xhosnx" sourceRef="Event_0svriq3" targetRef="Event_1ixawvj" />
     <bpmn:sequenceFlow id="Flow_17nj7du" sourceRef="Activity_1o90frc" targetRef="Gateway_0ug8hzo" />
     <bpmn:sequenceFlow id="Flow_1vwf3dy" name="Valor dentro do limite" sourceRef="Gateway_0ug8hzo" targetRef="Activity_1eoo3ky">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{ValorLimite == 'Sim'}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{VLvalorLimite == 'Sim'}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0ovd1fo" sourceRef="Activity_1eoo3ky" targetRef="Gateway_1lzjwqb" />
     <bpmn:sequenceFlow id="Flow_0sfuyc1" name="Financiamento Negado" sourceRef="Gateway_1lzjwqb" targetRef="Event_0o00nw3">
@@ -70,7 +70,7 @@
       <bpmn:messageEventDefinition id="MessageEventDefinition_1ffver2" messageRef="Message_1lf17o9" camunda:class="com.gpn.workflow.messages.broker.to_client.DeniedSolicitation" />
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_1mgyidb" name="Valor acima do limite" sourceRef="Gateway_0ug8hzo" targetRef="Event_1v7alx2">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{ValorLimite == 'Não'}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{VLvalorLimite == 'Não'}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_02izfm1" sourceRef="Event_1v7alx2" targetRef="Event_0svriq3" />
     <bpmn:intermediateThrowEvent id="Event_1v7alx2" name="Enviar solicitação ao banco">

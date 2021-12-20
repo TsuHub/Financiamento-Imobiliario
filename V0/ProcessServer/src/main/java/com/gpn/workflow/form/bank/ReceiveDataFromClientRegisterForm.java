@@ -9,9 +9,20 @@ public class ReceiveDataFromClientRegisterForm implements JavaDelegate
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception
     {
-        delegateExecution.setVariable("PFdata", ClientMap.getClient().getRequestDate());
-        delegateExecution.setVariable("PFnome", ClientMap.getClient().getRequesterName());
-        delegateExecution.setVariable("PFvalor", ClientMap.getClient().getFinancingValue());
-        delegateExecution.setVariable("PFrendimentos", ClientMap.getClient().getIncome());
+        inputFormFilling(delegateExecution);
+        inputVerifyIncome(delegateExecution);
+    }
+
+    public void inputFormFilling(DelegateExecution dE)
+    {
+        dE.setVariable("PFdata", ClientMap.getClient().getRequestDate());
+        dE.setVariable("PFnome", ClientMap.getClient().getRequesterName());
+        dE.setVariable("PFvalor", ClientMap.getClient().getFinancingValue());
+        dE.setVariable("PFrendimentos", ClientMap.getClient().getIncome());
+    }
+
+    public void inputVerifyIncome(DelegateExecution dE) {
+        double income = Double.parseDouble(ClientMap.getClient().getIncome());
+        dE.setVariable("VRverificaRendimentos", income);
     }
 }

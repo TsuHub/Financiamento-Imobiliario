@@ -2,11 +2,14 @@ package com.gpn.workflow.form.client;
 
 public class ClientData
 {
-    private String requestDate;
-    private String requesterName;
-    private String financingValue;
-    private String income;
-    private String choiceChannel;
+    private String requestDate;     // data da solicitação
+    private String requesterName;   // nome do solicitante
+    private String financingValue;  // valor da solicitação do financiamento
+    private String income;          // rendimentos
+    private String choiceChannel;   // Escolha por tratar com o banco ou corretora
+
+    private String revenues;        // Faturamento do solicitante
+    private String costs;           // custos
 
     public ClientData(String requestDate, String requesterName, String financingValue, String income, String choiceChannel) {
         this.requestDate = requestDate;
@@ -46,5 +49,29 @@ public class ClientData
 
     public void setIncome(String income) {
         this.income = income;
+    }
+
+    public String getChoiceChannel() {
+        return choiceChannel;
+    }
+
+    public void setChoiceChannel(String choiceChannel) {
+        this.choiceChannel = choiceChannel;
+    }
+
+    public String getRevenues() {
+        return revenues;
+    }
+
+    public void setRevenues(String revenues) {
+        this.revenues = revenues;
+    }
+
+    public String getCosts() {
+        return costs;
+    }
+
+    public void setCosts(String costs) {
+        this.costs = costs;
     }
 }
