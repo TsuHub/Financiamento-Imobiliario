@@ -5,7 +5,7 @@
       "label": "Valor solicitado pelo cliente está dentro do limite aceito pela corretora?",
       "type": "textfield",
       "id": "Field_12y7vqc",
-      "key": "ValorLimite",
+      "key": "VLvalorLimite",
       "description": "Entradas aceitas: \"Sim\" para solicitações abaixo de R$50.000 e \"Não\" para solicitações acima de R$50.000",
       "validate": {
         "regularExpressionPattern": "Sim|Não"

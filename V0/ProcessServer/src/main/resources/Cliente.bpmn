@@ -112,10 +112,10 @@
     </bpmn:exclusiveGateway>
     <bpmn:sequenceFlow id="Flow_0ni3xl4" sourceRef="Activity_13bugsg" targetRef="Activity_0p57o0y" />
     <bpmn:sequenceFlow id="Flow_17slzth" name="Tratamento direto com o banco" sourceRef="Gateway_0qol0yd" targetRef="Event_1lclagh">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{EscolhaCanal == 'Banco'}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{ECescolhaCanal == 'Banco'}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_1s0jrmn" name="Tratamento por meio de corretora" sourceRef="Gateway_0qol0yd" targetRef="Event_0oe8c31">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{EscolhaCanal == 'Corretora'}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{ECescolhaCanal == 'Corretora'}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_1yjzwyp" sourceRef="Event_1lclagh" targetRef="Gateway_0bzkmu1" />
     <bpmn:sequenceFlow id="Flow_092d9n5" sourceRef="Event_0oe8c31" targetRef="Gateway_0bzkmu1" />
@@ -180,7 +180,7 @@
       <bpmn:outgoing>Flow_0ni3xl4</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:sequenceFlow id="Flow_1g8l7hv" sourceRef="Activity_0p57o0y" targetRef="Gateway_0qol0yd" />
-    <bpmn:serviceTask id="Activity_0p57o0y" name="Enviar dados para o sistema" camunda:class="com.gpn.workflow.form.ClientDataController">
+    <bpmn:serviceTask id="Activity_0p57o0y" name="Enviar dados para o sistema" camunda:class="com.gpn.workflow.form.client.ClientDataSubmission">
       <bpmn:incoming>Flow_0ni3xl4</bpmn:incoming>
       <bpmn:outgoing>Flow_1g8l7hv</bpmn:outgoing>
     </bpmn:serviceTask>
@@ -204,6 +204,10 @@
       <bpmndi:BPMNShape id="Participant_10mnubt_di" bpmnElement="Participant_10mnubt" isHorizontal="true">
         <dc:Bounds x="156" y="69" width="6570" height="600" />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1g8l7hv_di" bpmnElement="Flow_1g8l7hv">
+        <di:waypoint x="1870" y="368" />
+        <di:waypoint x="2005" y="368" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1rave86_di" bpmnElement="Flow_1rave86">
         <di:waypoint x="5140" y="363" />
         <di:waypoint x="5213" y="363" />
@@ -361,10 +365,6 @@
         <di:waypoint x="2970" y="339" />
         <di:waypoint x="2970" y="251" />
         <di:waypoint x="3228" y="251" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1g8l7hv_di" bpmnElement="Flow_1g8l7hv">
-        <di:waypoint x="1870" y="368" />
-        <di:waypoint x="2005" y="368" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Event_0g7uu19_di" bpmnElement="Event_0g7uu19">
         <dc:Bounds x="4258" y="411" width="36" height="36" />

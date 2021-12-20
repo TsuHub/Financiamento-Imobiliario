@@ -1,4 +1,4 @@
-package com.gpn.workflow.form;
+package com.gpn.workflow.form.client;
 
 public class ClientData
 {
@@ -6,12 +6,14 @@ public class ClientData
     private String requesterName;
     private String financingValue;
     private String income;
+    private String choiceChannel;
 
-    public ClientData(String requestDate, String requesterName, String financingValue, String income) {
+    public ClientData(String requestDate, String requesterName, String financingValue, String income, String choiceChannel) {
         this.requestDate = requestDate;
         this.requesterName = requesterName;
         this.financingValue = financingValue;
         this.income = income;
+        this.choiceChannel = choiceChannel;
     }
 
     public String getRequestDate() {

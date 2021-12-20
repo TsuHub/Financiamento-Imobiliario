@@ -283,10 +283,10 @@
       <bpmn:messageEventDefinition id="MessageEventDefinition_016xd70" messageRef="Message_11zyyif" />
     </bpmn:startEvent>
     <bpmn:sequenceFlow id="Flow_1y0oofx" sourceRef="Activity_049brzw" targetRef="Activity_1a143q3" />
-    <bpmn:userTask id="Activity_049brzw" name="Receber dados do formulário do registro">
+    <bpmn:serviceTask id="Activity_049brzw" name="Receber dados do formulário do registro" camunda:class="com.gpn.workflow.form.bank.ReceiveDataFromClientRegisterForm">
       <bpmn:incoming>Flow_00odlkf</bpmn:incoming>
       <bpmn:outgoing>Flow_1y0oofx</bpmn:outgoing>
-    </bpmn:userTask>
+    </bpmn:serviceTask>
   </bpmn:process>
   <bpmn:process id="Process_1j312u4" isExecutable="false">
     <bpmn:laneSet id="LaneSet_0ddwhrp" />
@@ -692,7 +692,7 @@
           <dc:Bounds x="1463" y="275" width="54" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_01nxuml_di" bpmnElement="Activity_049brzw">
+      <bpmndi:BPMNShape id="Activity_10t7p4l_di" bpmnElement="Activity_049brzw">
         <dc:Bounds x="1570" y="210" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Participant_11zrfkd_di" bpmnElement="Participant_11zrfkd" isHorizontal="true">

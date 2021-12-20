@@ -38,7 +38,7 @@
       <bpmn:messageEventDefinition id="MessageEventDefinition_0hg70k9" messageRef="Message_010mtz2" camunda:class="com.gpn.workflow.messages.broker.to_bank.TransferInformationsToBank" />
     </bpmn:endEvent>
     <bpmn:userTask id="Activity_1o90frc" name="Checar solicitação" camunda:formKey="camunda-forms:deployment:ValorLimite.form">
-      <bpmn:incoming>Flow_1hq7xzw</bpmn:incoming>
+      <bpmn:incoming>Flow_158vzoe</bpmn:incoming>
       <bpmn:outgoing>Flow_17nj7du</bpmn:outgoing>
     </bpmn:userTask>
     <bpmn:userTask id="Activity_1eoo3ky" name="Avaliar financiamento internamente" camunda:formKey="camunda-forms:deployment:AvalFinan.form">
@@ -54,7 +54,7 @@
     <bpmn:sequenceFlow id="Flow_1xhosnx" sourceRef="Event_0svriq3" targetRef="Event_1ixawvj" />
     <bpmn:sequenceFlow id="Flow_17nj7du" sourceRef="Activity_1o90frc" targetRef="Gateway_0ug8hzo" />
     <bpmn:sequenceFlow id="Flow_1vwf3dy" name="Valor dentro do limite" sourceRef="Gateway_0ug8hzo" targetRef="Activity_1eoo3ky">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{ValorLimite == 'Sim'}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{VLvalorLimite == 'Sim'}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_0ovd1fo" sourceRef="Activity_1eoo3ky" targetRef="Gateway_1lzjwqb" />
     <bpmn:sequenceFlow id="Flow_0sfuyc1" name="Financiamento Negado" sourceRef="Gateway_1lzjwqb" targetRef="Event_0o00nw3">
@@ -64,13 +64,13 @@
       <bpmn:outgoing>Flow_1hq7xzw</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_08zuh57" messageRef="Message_0qtnjgy" />
     </bpmn:startEvent>
-    <bpmn:sequenceFlow id="Flow_1hq7xzw" sourceRef="Event_1cwxyhw" targetRef="Activity_1o90frc" />
+    <bpmn:sequenceFlow id="Flow_1hq7xzw" sourceRef="Event_1cwxyhw" targetRef="Activity_1ks9v7l" />
     <bpmn:endEvent id="Event_0o00nw3" name="Solicitação indeferida">
       <bpmn:incoming>Flow_0sfuyc1</bpmn:incoming>
       <bpmn:messageEventDefinition id="MessageEventDefinition_1ffver2" messageRef="Message_1lf17o9" camunda:class="com.gpn.workflow.messages.broker.to_client.DeniedSolicitation" />
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_1mgyidb" name="Valor acima do limite" sourceRef="Gateway_0ug8hzo" targetRef="Event_1v7alx2">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{ValorLimite == 'Não'}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{VLvalorLimite == 'Não'}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_02izfm1" sourceRef="Event_1v7alx2" targetRef="Event_0svriq3" />
     <bpmn:intermediateThrowEvent id="Event_1v7alx2" name="Enviar solicitação ao banco">
@@ -88,6 +88,11 @@
       <bpmn:outgoing>Flow_16hsecf</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_104d2l5" messageRef="Message_1y3ifsn" camunda:class="com.gpn.workflow.messages.broker.to_client.SendApprovedNotification" />
     </bpmn:intermediateThrowEvent>
+    <bpmn:sequenceFlow id="Flow_158vzoe" sourceRef="Activity_1ks9v7l" targetRef="Activity_1o90frc" />
+    <bpmn:serviceTask id="Activity_1ks9v7l" name="Colocar &#34;Sim&#34; para dentro do limite e &#34;Não&#34; caso contrário" camunda:class="com.gpn.workflow.form.broker.InputCheckRequest">
+      <bpmn:incoming>Flow_1hq7xzw</bpmn:incoming>
+      <bpmn:outgoing>Flow_158vzoe</bpmn:outgoing>
+    </bpmn:serviceTask>
   </bpmn:process>
   <bpmn:message id="Message_0qtnjgy" name="TratamentoCorretora" />
   <bpmn:message id="Message_06g9jrt" name="BancoEnvioPropostasCorretora" />
@@ -104,6 +109,10 @@
       <bpmndi:BPMNShape id="Participant_0qho8cl_di" bpmnElement="Participant_0qho8cl" isHorizontal="true">
         <dc:Bounds x="160" y="80" width="6561" height="630" />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_16hsecf_di" bpmnElement="Flow_16hsecf">
+        <di:waypoint x="3938" y="177" />
+        <di:waypoint x="4036" y="177" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_02izfm1_di" bpmnElement="Flow_02izfm1">
         <di:waypoint x="1628" y="537" />
         <di:waypoint x="3666" y="537" />
@@ -118,7 +127,7 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1hq7xzw_di" bpmnElement="Flow_1hq7xzw">
         <di:waypoint x="1035" y="407" />
-        <di:waypoint x="1337" y="407" />
+        <di:waypoint x="1140" y="407" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0sfuyc1_di" bpmnElement="Flow_0sfuyc1">
         <di:waypoint x="2979" y="302" />
@@ -168,9 +177,9 @@
         <di:waypoint x="3800" y="177" />
         <di:waypoint x="3902" y="177" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_16hsecf_di" bpmnElement="Flow_16hsecf">
-        <di:waypoint x="3938" y="177" />
-        <di:waypoint x="4036" y="177" />
+      <bpmndi:BPMNEdge id="Flow_158vzoe_di" bpmnElement="Flow_158vzoe">
+        <di:waypoint x="1240" y="407" />
+        <di:waypoint x="1337" y="407" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Gateway_1lzjwqb_di" bpmnElement="Gateway_1lzjwqb" isMarkerVisible="true">
         <dc:Bounds x="2954" y="252" width="50" height="50" />
@@ -237,6 +246,9 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1k1ha8l_di" bpmnElement="Event_05v069y">
         <dc:Bounds x="3902" y="159" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_045482j_di" bpmnElement="Activity_1ks9v7l">
+        <dc:Bounds x="1140" y="367" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

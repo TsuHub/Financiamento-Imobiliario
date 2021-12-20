@@ -42,7 +42,7 @@
       "label": "Qual a canal que você gostaria de iniciar o seu financiamento?",
       "type": "textfield",
       "id": "Field_1tbptis",
-      "key": "EscolhaCanal",
+      "key": "ECescolhaCanal",
       "description": "Digite \"Corretora\" para começar um financiamento com a corretora ou digite \"Banco\" para falar diretamente com o banco",
       "validate": {
         "regularExpressionPattern": "Corretora|Banco",
