@@ -5,7 +5,7 @@
       "label": "Data da solicitação",
       "type": "textfield",
       "id": "Field_01xc1kw",
-      "key": "field_04nyppa",
+      "key": "PFdata",
       "validate": {
         "required": true
       },
@@ -15,7 +15,7 @@
       "label": "Nome do solicitante",
       "type": "textfield",
       "id": "Field_0wsxin2",
-      "key": "field_09daga7",
+      "key": "PFnome",
       "description": "Apenas o primeiro nome",
       "validate": {
         "required": true
@@ -25,7 +25,7 @@
       "label": "Valor do financiamento",
       "type": "textfield",
       "id": "Field_0kmxzdo",
-      "key": "field_1kozu2a",
+      "key": "PFvalor",
       "description": "Ex: 100000.00",
       "validate": {
         "required": true
@@ -35,21 +35,10 @@
       "label": "Rendimentos do solicitante",
       "type": "textfield",
       "id": "Field_0otjy7a",
-      "key": "field_1pkgjpj",
+      "key": "PFrendimentos",
       "description": "Ex: 5000.00"
-    },
-    {
-      "label": "Qual a canal que você gostaria de iniciar o seu financiamento?",
-      "type": "textfield",
-      "id": "Field_1tbptis",
-      "key": "EscolhaCanal",
-      "description": "Digite \"Corretora\" para começar um financiamento com a corretora ou digite \"Banco\" para falar diretamente com o banco",
-      "validate": {
-        "regularExpressionPattern": "Corretora|Banco",
-        "required": true
-      }
     }
   ],
   "type": "default",
-  "id": "Form_1d1xf8u"
+  "id": "Form_0pyk0t7"
 }

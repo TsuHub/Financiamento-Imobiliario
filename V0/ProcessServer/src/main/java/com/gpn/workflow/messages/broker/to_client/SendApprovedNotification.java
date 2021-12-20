@@ -7,7 +7,7 @@ public class SendApprovedNotification implements JavaDelegate
 {
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
-        //com.gpn.workflow.messages.broker.to_client.SendApprovedNotification
+
         delegateExecution.getProcessEngineServices().getRuntimeService()
                 .createMessageCorrelation("CorretoraNotificaAprovacaoCliente")
                 .correlate();

@@ -2,33 +2,41 @@
   "schemaVersion": 2,
   "components": [
     {
-      "label": "Nome",
+      "label": "Data da solicitação",
       "type": "textfield",
       "id": "Field_01xc1kw",
       "key": "field_04nyppa",
       "validate": {
         "required": true
-      }
+      },
+      "description": "Formato: dd/mm/aaaa"
     },
     {
-      "label": "Faturamento Anual",
+      "label": "Nome do solicitante",
       "type": "textfield",
       "id": "Field_0wsxin2",
       "key": "field_09daga7",
-      "description": "Indicador de risco da pessoa física ou jurídica.",
+      "description": "Apenas o primeiro nome",
       "validate": {
         "required": true
       }
     },
     {
-      "label": "Valor pedido no financiamento",
+      "label": "Valor do financiamento",
       "type": "textfield",
       "id": "Field_0kmxzdo",
       "key": "field_1kozu2a",
-      "description": "Valor que você gostaria de solicitar para receber no seu empréstimo",
+      "description": "Ex: 100000.00",
       "validate": {
         "required": true
       }
+    },
+    {
+      "label": "Rendimentos do solicitante",
+      "type": "textfield",
+      "id": "Field_0otjy7a",
+      "key": "field_1pkgjpj",
+      "description": "Ex: 5000.00"
     },
     {
       "label": "Qual a canal que você gostaria de iniciar o seu financiamento?",

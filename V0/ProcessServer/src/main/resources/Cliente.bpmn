@@ -90,10 +90,6 @@
       <bpmn:incoming>Flow_13r8jnc</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_1k5oip3" sourceRef="Gateway_0bzkmu1" targetRef="Gateway_047kvat" />
-    <bpmn:userTask id="Activity_13bugsg" name="Escolher forma de solicitar" camunda:formKey="camunda-forms:deployment:EscolhaCanal.form">
-      <bpmn:incoming>Flow_1g48x40</bpmn:incoming>
-      <bpmn:outgoing>Flow_0ni3xl4</bpmn:outgoing>
-    </bpmn:userTask>
     <bpmn:exclusiveGateway id="Gateway_0qol0yd">
       <bpmn:incoming>Flow_0ni3xl4</bpmn:incoming>
       <bpmn:outgoing>Flow_17slzth</bpmn:outgoing>
@@ -179,6 +175,10 @@
       <bpmn:incoming>Flow_0zj2mlg</bpmn:incoming>
       <bpmn:outgoing>Flow_1rave86</bpmn:outgoing>
     </bpmn:userTask>
+    <bpmn:userTask id="Activity_13bugsg" name="Escolher forma de solicitar" camunda:formKey="camunda-forms:deployment:EscolhaCanal.form">
+      <bpmn:incoming>Flow_1g48x40</bpmn:incoming>
+      <bpmn:outgoing>Flow_0ni3xl4</bpmn:outgoing>
+    </bpmn:userTask>
   </bpmn:process>
   <bpmn:message id="Message_19lgate" name="ClientePropostaEscolhidaCorretora" />
   <bpmn:message id="Message_0tmni8z" name="CorretoraNotificaAprovacaoCliente" />
@@ -199,6 +199,10 @@
       <bpmndi:BPMNShape id="Participant_10mnubt_di" bpmnElement="Participant_10mnubt" isHorizontal="true">
         <dc:Bounds x="156" y="69" width="6570" height="600" />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1rave86_di" bpmnElement="Flow_1rave86">
+        <di:waypoint x="5140" y="363" />
+        <di:waypoint x="5213" y="363" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1en0syg_di" bpmnElement="Flow_1en0syg">
         <di:waypoint x="5545" y="442" />
         <di:waypoint x="6204" y="442" />
@@ -244,7 +248,7 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1g48x40_di" bpmnElement="Flow_1g48x40">
         <di:waypoint x="1078" y="368" />
-        <di:waypoint x="1860" y="368" />
+        <di:waypoint x="1790" y="368" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_092d9n5_di" bpmnElement="Flow_092d9n5">
         <di:waypoint x="2138" y="459" />
@@ -273,7 +277,7 @@
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0ni3xl4_di" bpmnElement="Flow_0ni3xl4">
-        <di:waypoint x="1960" y="368" />
+        <di:waypoint x="1890" y="368" />
         <di:waypoint x="2005" y="368" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1k5oip3_di" bpmnElement="Flow_1k5oip3">
@@ -353,10 +357,6 @@
         <di:waypoint x="2970" y="251" />
         <di:waypoint x="3228" y="251" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1rave86_di" bpmnElement="Flow_1rave86">
-        <di:waypoint x="5140" y="363" />
-        <di:waypoint x="5213" y="363" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Event_0g7uu19_di" bpmnElement="Event_0g7uu19">
         <dc:Bounds x="4258" y="411" width="36" height="36" />
         <bpmndi:BPMNLabel>
@@ -426,9 +426,6 @@
           <dc:Bounds x="3653" y="276" width="54" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_13bugsg_di" bpmnElement="Activity_13bugsg">
-        <dc:Bounds x="1860" y="328" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_0qol0yd_di" bpmnElement="Gateway_0qol0yd" isMarkerVisible="true">
         <dc:Bounds x="2005" y="343" width="50" height="50" />
       </bpmndi:BPMNShape>
@@ -491,6 +488,9 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0aqu2sq_di" bpmnElement="Activity_171lewy">
         <dc:Bounds x="5040" y="320" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_13bugsg_di" bpmnElement="Activity_13bugsg">
+        <dc:Bounds x="1790" y="328" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
