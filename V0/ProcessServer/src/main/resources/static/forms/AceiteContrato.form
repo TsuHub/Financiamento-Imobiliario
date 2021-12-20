@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 2,
+  "components": [
+    {
+      "label": "Cliente aceita ou rejeita contrato",
+      "type": "textfield",
+      "id": "Field_017pg7p",
+      "key": "AceiteContrato",
+      "validate": {
+        "regularExpressionPattern": "Aceita|Rejeita"
+      },
+      "description": "Aceita|Rejeita"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0t93uf8"
+}

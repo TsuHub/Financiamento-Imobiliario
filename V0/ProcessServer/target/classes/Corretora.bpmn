@@ -22,7 +22,7 @@
     <bpmn:intermediateThrowEvent id="Event_1ixawvj" name="Repasse das três porpostas para&#10;o cliente">
       <bpmn:incoming>Flow_1xhosnx</bpmn:incoming>
       <bpmn:outgoing>Flow_04a7sq6</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_0dwb895" messageRef="Message_0djl0qn" camunda:class="org.usp.each.gpn.workflow.messages.broker.to_client.TransferProposalsToClient" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0dwb895" messageRef="Message_0djl0qn" camunda:class="com.gpn.workflow.messages.broker.to_client.TransferProposalsToClient" />
     </bpmn:intermediateThrowEvent>
     <bpmn:intermediateCatchEvent id="Event_09v62ry" name="Recebimento&#10;da proposta escolhida">
       <bpmn:incoming>Flow_04a7sq6</bpmn:incoming>
@@ -31,11 +31,11 @@
     </bpmn:intermediateCatchEvent>
     <bpmn:endEvent id="Event_01mz31q" name="Repasse da propostas">
       <bpmn:incoming>Flow_182foyd</bpmn:incoming>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_1ywmwk2" messageRef="Message_188p45c" camunda:class="org.usp.each.gpn.workflow.messages.broker.to_bank.TransferProposalsToBank" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1ywmwk2" messageRef="Message_188p45c" camunda:class="com.gpn.workflow.messages.broker.to_bank.TransferProposalsToBank" />
     </bpmn:endEvent>
     <bpmn:endEvent id="Event_0lki1j5" name="Envio de informações do financiamento para o banco">
-      <bpmn:incoming>Flow_03zweis</bpmn:incoming>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_0hg70k9" messageRef="Message_010mtz2" camunda:class="org.usp.each.gpn.workflow.messages.broker.to_bank.SenderBrokerToBank" />
+      <bpmn:incoming>Flow_16hsecf</bpmn:incoming>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0hg70k9" messageRef="Message_010mtz2" camunda:class="com.gpn.workflow.messages.broker.to_bank.TransferInformationsToBank" />
     </bpmn:endEvent>
     <bpmn:userTask id="Activity_1o90frc" name="Checar solicitação" camunda:formKey="camunda-forms:deployment:ValorLimite.form">
       <bpmn:incoming>Flow_1hq7xzw</bpmn:incoming>
@@ -45,11 +45,7 @@
       <bpmn:incoming>Flow_1vwf3dy</bpmn:incoming>
       <bpmn:outgoing>Flow_0ovd1fo</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="Activity_0bcqnha" name="Enviar notificação aprovada para o cliente">
-      <bpmn:incoming>Flow_1tp24d3</bpmn:incoming>
-      <bpmn:outgoing>Flow_03zweis</bpmn:outgoing>
-    </bpmn:userTask>
-    <bpmn:sequenceFlow id="Flow_03zweis" sourceRef="Activity_0bcqnha" targetRef="Event_0lki1j5" />
+    <bpmn:sequenceFlow id="Flow_03zweis" sourceRef="Activity_0bcqnha" targetRef="Event_05v069y" />
     <bpmn:sequenceFlow id="Flow_182foyd" sourceRef="Event_09v62ry" targetRef="Event_01mz31q" />
     <bpmn:sequenceFlow id="Flow_04a7sq6" sourceRef="Event_1ixawvj" targetRef="Event_09v62ry" />
     <bpmn:sequenceFlow id="Flow_1tp24d3" name="Financiamento Aprovado" sourceRef="Gateway_1lzjwqb" targetRef="Activity_0bcqnha">
@@ -71,7 +67,7 @@
     <bpmn:sequenceFlow id="Flow_1hq7xzw" sourceRef="Event_1cwxyhw" targetRef="Activity_1o90frc" />
     <bpmn:endEvent id="Event_0o00nw3" name="Solicitação indeferida">
       <bpmn:incoming>Flow_0sfuyc1</bpmn:incoming>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_1ffver2" messageRef="Message_1lf17o9" camunda:class="org.usp.each.gpn.workflow.messages.broker.to_client.DeniedSolicitation" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1ffver2" messageRef="Message_1lf17o9" camunda:class="com.gpn.workflow.messages.broker.to_client.DeniedSolicitation" />
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_1mgyidb" name="Valor acima do limite" sourceRef="Gateway_0ug8hzo" targetRef="Event_1v7alx2">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{ValorLimite == 'Não'}</bpmn:conditionExpression>
@@ -80,18 +76,29 @@
     <bpmn:intermediateThrowEvent id="Event_1v7alx2" name="Enviar solicitação ao banco">
       <bpmn:incoming>Flow_1mgyidb</bpmn:incoming>
       <bpmn:outgoing>Flow_02izfm1</bpmn:outgoing>
-      <bpmn:messageEventDefinition id="MessageEventDefinition_1o1e2t8" messageRef="Message_1uxhnyq" camunda:class="org.usp.each.gpn.workflow.messages.broker.to_bank.SendSolicitation" />
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1o1e2t8" messageRef="Message_1uxhnyq" camunda:class="com.gpn.workflow.messages.broker.to_bank.TransferSolicitationToBank" />
+    </bpmn:intermediateThrowEvent>
+    <bpmn:userTask id="Activity_0bcqnha" name="Enviar notificação aprovada para o cliente">
+      <bpmn:incoming>Flow_1tp24d3</bpmn:incoming>
+      <bpmn:outgoing>Flow_03zweis</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_16hsecf" sourceRef="Event_05v069y" targetRef="Event_0lki1j5" />
+    <bpmn:intermediateThrowEvent id="Event_05v069y">
+      <bpmn:incoming>Flow_03zweis</bpmn:incoming>
+      <bpmn:outgoing>Flow_16hsecf</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_104d2l5" messageRef="Message_1y3ifsn" camunda:class="com.gpn.workflow.messages.broker.to_client.SendApprovedNotification" />
     </bpmn:intermediateThrowEvent>
   </bpmn:process>
   <bpmn:message id="Message_0qtnjgy" name="TratamentoCorretora" />
-  <bpmn:message id="Message_06g9jrt" name="PropostaCorretora" />
-  <bpmn:message id="Message_0djl0qn" name="RepasseCliente" />
-  <bpmn:message id="Message_1gq3ken" name="NotificaCorretora" />
-  <bpmn:message id="Message_188p45c" name="RepasseBanco" />
-  <bpmn:message id="Message_010mtz2" name="EnvioCorretoraBanco" />
+  <bpmn:message id="Message_06g9jrt" name="BancoEnvioPropostasCorretora" />
+  <bpmn:message id="Message_0djl0qn" name="CorretoraRepasseCliente" />
+  <bpmn:message id="Message_1gq3ken" name="ClientePropostaEscolhidaCorretora" />
+  <bpmn:message id="Message_188p45c" name="PropostaEscolhidaBanco" />
+  <bpmn:message id="Message_010mtz2" name="CorretoraRepassaBanco" />
   <bpmn:message id="Message_1lf17o9" name="FinanciamentoNegado" />
   <bpmn:message id="Message_1re8glh" />
   <bpmn:message id="Message_1uxhnyq" name="TratamentoBanco" />
+  <bpmn:message id="Message_1y3ifsn" name="CorretoraNotificaAprovacaoCliente" />
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0hhb8z0">
       <bpmndi:BPMNShape id="Participant_0qho8cl_di" bpmnElement="Participant_0qho8cl" isHorizontal="true">
@@ -144,7 +151,7 @@
       <bpmndi:BPMNEdge id="Flow_1tp24d3_di" bpmnElement="Flow_1tp24d3">
         <di:waypoint x="2979" y="252" />
         <di:waypoint x="2979" y="177" />
-        <di:waypoint x="3807" y="177" />
+        <di:waypoint x="3700" y="177" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="2945" y="133" width="73" height="27" />
         </bpmndi:BPMNLabel>
@@ -158,7 +165,11 @@
         <di:waypoint x="4339" y="537" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_03zweis_di" bpmnElement="Flow_03zweis">
-        <di:waypoint x="3907" y="177" />
+        <di:waypoint x="3800" y="177" />
+        <di:waypoint x="3902" y="177" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_16hsecf_di" bpmnElement="Flow_16hsecf">
+        <di:waypoint x="3938" y="177" />
         <di:waypoint x="4036" y="177" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Gateway_1lzjwqb_di" bpmnElement="Gateway_1lzjwqb" isMarkerVisible="true">
@@ -203,9 +214,6 @@
       <bpmndi:BPMNShape id="Activity_1eoo3ky_di" bpmnElement="Activity_1eoo3ky">
         <dc:Bounds x="1599" y="237" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0bcqnha_di" bpmnElement="Activity_0bcqnha">
-        <dc:Bounds x="3807" y="137" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_00756x9_di" bpmnElement="Event_1cwxyhw">
         <dc:Bounds x="999" y="389" width="36" height="36" />
         <bpmndi:BPMNLabel>
@@ -223,6 +231,12 @@
         <bpmndi:BPMNLabel>
           <dc:Bounds x="1567" y="562" width="86" height="27" />
         </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_139q4mo_di" bpmnElement="Activity_0bcqnha">
+        <dc:Bounds x="3700" y="137" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1k1ha8l_di" bpmnElement="Event_05v069y">
+        <dc:Bounds x="3902" y="159" width="36" height="36" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
