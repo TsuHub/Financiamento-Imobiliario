@@ -6,7 +6,7 @@
       "type": "textfield",
       "id": "Field_12y7vqc",
       "key": "VLvalorLimite",
-      "description": "Entradas aceitas: \"Sim\" para solicitações abaixo de R$50.000 e \"Não\" para solicitações acima de R$50.000",
+      "description": "Entradas aceitas: \"Sim\" para solicitações abaixo de R$50.000,00 e \"Não\" para solicitações acima de R$50.000,00",
       "validate": {
         "regularExpressionPattern": "Sim|Não"
       }

@@ -75,7 +75,7 @@
         "regularExpressionPattern": "Aprovado|Negado",
         "required": true
       },
-      "description": "Entradas aceitas: \"Aprovado\" para resultados aprovados e \"Negado\" para resultados negados"
+      "description": "Para a aprovação do financiamento, seu lucro deve equivalente a pelo menos 10% do valor do pedido de financiamento."
     }
   ],
   "type": "default",

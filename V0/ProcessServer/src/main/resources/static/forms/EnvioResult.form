@@ -5,7 +5,7 @@
       "label": "Qual canal deve ser retornada a mesangem?",
       "type": "textfield",
       "id": "Field_0sdn48w",
-      "key": "EnvioResult",
+      "key": "EVcanalDeRetorno",
       "description": "Entradas aceitas: \"Cliente\" para contatos iniciados pelo cliente e \"Corretora\" para contatos realizados pela corretora",
       "validate": {
         "regularExpressionPattern": "Cliente|Corretora"

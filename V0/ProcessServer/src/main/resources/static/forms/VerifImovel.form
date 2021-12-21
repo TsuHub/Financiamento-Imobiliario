@@ -19,13 +19,13 @@
       "label": "Qual a condição do imóvel",
       "type": "select",
       "id": "Field_0bqd2tt",
-      "key": "field_0ib0w7i"
+      "key": "VIcondicaoImovel"
     },
     {
       "label": "Preço do imóvel",
       "type": "number",
       "id": "Field_1xq8si1",
-      "key": "field_01sej9c",
+      "key": "VIprecoImovel",
       "description": "O valor pelo qual o imóvel está sendo vendido."
     }
   ],

@@ -8,7 +8,8 @@
       "key": "VSFcustos",
       "validate": {
         "required": true
-      }
+      },
+      "description": "Para a aprovação: Custo <= RendimentoAnual - (0,1 x ValorFinanciamento)"
     }
   ],
   "type": "default",

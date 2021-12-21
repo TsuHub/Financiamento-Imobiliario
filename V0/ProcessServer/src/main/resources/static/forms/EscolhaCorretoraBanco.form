@@ -5,12 +5,11 @@
       "label": "Seguir com a Corretora ou com o Banco",
       "type": "textfield",
       "id": "Field_1f344lc",
-      "key": "escolhaCorretoraBanco",
+      "key": "ECBescolhaCorretoraBanco",
       "validate": {
-        "regularExpressionPattern": "Seguir-Corretora|Seguir-Banco",
+        "regularExpressionPattern": "Corretora|Banco",
         "required": true
-      },
-      "description": "Valores aceitos: 'Seguir-Corretora' ou 'Seguir-Banco'"
+      }
     }
   ],
   "type": "default",

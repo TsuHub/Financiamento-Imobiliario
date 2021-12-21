@@ -26,17 +26,17 @@
       "type": "textfield",
       "id": "Field_0kmxzdo",
       "key": "ECvalor",
-      "description": "Ex: 100000.00",
+      "description": "Ex: 200000.00",
       "validate": {
         "required": true
       }
     },
     {
-      "label": "Rendimentos do solicitante",
+      "label": "Rendimentos anuais do solicitante",
       "type": "textfield",
       "id": "Field_0otjy7a",
       "key": "ECrendimentos",
-      "description": "Ex: 5000.00"
+      "description": "Ex: 50000.00"
     },
     {
       "label": "Qual a canal que você gostaria de iniciar o seu financiamento?",

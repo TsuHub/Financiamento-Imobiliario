@@ -8,17 +8,18 @@ public class ClientData
     private String requesterName;   // nome do solicitante
     private String financingValue;  // valor da solicitação do financiamento
     private String income;          // rendimentos
-    private String choiceChannel;   // Escolha por tratar com o banco ou corretora
+    private String choicedChannel;   // Escolha por tratar com o banco ou corretora
 
-    private String revenues;        // Faturamento do solicitante
+    private String revenues;        // faturamento do solicitante
     private String costs;           // custos
+    private String propertyStatus;  // condição do imóvel
 
-    public ClientData(String requestDate, String requesterName, String financingValue, String income, String choiceChannel) {
+    public ClientData(String requestDate, String requesterName, String financingValue, String income, String choicedChannel) {
         this.requestDate = requestDate;
         this.requesterName = requesterName;
         this.financingValue = financingValue;
         this.income = income;
-        this.choiceChannel = choiceChannel;
+        this.choicedChannel = choicedChannel;
     }
 
     public String getRequestDate() {
@@ -53,12 +54,12 @@ public class ClientData
         this.income = income;
     }
 
-    public String getChoiceChannel() {
-        return choiceChannel;
+    public String getChoicedChannel() {
+        return choicedChannel;
     }
 
-    public void setChoiceChannel(String choiceChannel) {
-        this.choiceChannel = choiceChannel;
+    public void setChoiceChannel(String choicedChannel) {
+        this.choicedChannel = choicedChannel;
     }
 
     public String getRevenues() {
@@ -75,5 +76,13 @@ public class ClientData
 
     public void setCosts(String costs) {
         this.costs = costs;
+    }
+
+    public String getPropertyStatus() {
+        return propertyStatus;
+    }
+
+    public void setPropertyStatus(String propertyStatus) {
+        this.propertyStatus = propertyStatus;
     }
 }
