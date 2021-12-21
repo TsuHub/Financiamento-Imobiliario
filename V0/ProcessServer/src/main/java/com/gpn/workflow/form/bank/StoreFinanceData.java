@@ -11,9 +11,7 @@ public class StoreFinanceData implements JavaDelegate
         inicializeClientDataVars(delegateExecution);
     }
 
-    public void inicializeClientDataVars(DelegateExecution dE)
-    {
-        ClientMap.getClient().setRevenues((String) dE.getVariable("VSFfaturamento"));
+    public void inicializeClientDataVars(DelegateExecution dE) {
         ClientMap.getClient().setCosts((String) dE.getVariable("VSFcustos"));
     }
 }

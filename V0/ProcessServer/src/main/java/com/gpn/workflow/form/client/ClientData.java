@@ -2,6 +2,8 @@ package com.gpn.workflow.form.client;
 
 public class ClientData
 {
+    // Process: Escolha Canal
+    // Form:    EscolhaCanal: Banco|Corretora
     private String requestDate;     // data da solicitação
     private String requesterName;   // nome do solicitante
     private String financingValue;  // valor da solicitação do financiamento

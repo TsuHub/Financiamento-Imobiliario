@@ -29,14 +29,7 @@
       "label": "Qual a condição do imóvel",
       "type": "select",
       "id": "Field_0bqd2tt",
-      "key": "field_0ib0w7i"
-    },
-    {
-      "label": "Preço do imóvel",
-      "type": "number",
-      "id": "Field_1xq8si1",
-      "key": "field_01sej9c",
-      "description": "O valor pelo qual o imóvel está sendo vendido."
+      "key": "ARcondicaoImovel"
     },
     {
       "text": "## Rendimentos",
@@ -47,7 +40,7 @@
       "label": "Rendimentos alegados no último ano",
       "type": "number",
       "id": "Field_0gzyqv7",
-      "key": "field_0aenpez",
+      "key": "ARrendimentos",
       "description": "Rendimentos que o usuário alegou possuir no último ano"
     },
     {
@@ -56,41 +49,28 @@
       "id": "Field_16sxnzh"
     },
     {
-      "label": "Faturamento",
-      "type": "textfield",
-      "id": "Field_05c90gx",
-      "key": "field_0fe3bqe",
-      "description": "Indicador de risco da pessoa física ou jurídica.",
-      "validate": {
-        "required": true
-      }
-    },
-    {
-      "label": "Recebimentos",
-      "type": "textfield",
-      "id": "Field_0gkqtyr",
-      "key": "field_0uuqj41",
-      "validate": {
-        "required": true
-      }
-    },
-    {
       "label": "Lucros",
       "type": "textfield",
       "id": "Field_0h77h3d",
-      "key": "field_03edt46"
+      "key": "ARlucros",
+      "validate": {
+        "required": true
+      }
     },
     {
-      "label": "Custos fixos",
+      "label": "Custos",
       "type": "textfield",
       "id": "Field_0ri8ukr",
-      "key": "field_1gurzbr"
+      "key": "ARcustos",
+      "validate": {
+        "required": true
+      }
     },
     {
       "label": "Conclusão da Análise",
       "type": "textfield",
       "id": "Field_19k6k50",
-      "key": "AnaliseResults",
+      "key": "ARconclusao",
       "validate": {
         "regularExpressionPattern": "Aprovado|Negado",
         "required": true

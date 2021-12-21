@@ -2,16 +2,6 @@
   "schemaVersion": 2,
   "components": [
     {
-      "label": "Faturamento",
-      "type": "textfield",
-      "id": "Field_05c90gx",
-      "key": "VSFfaturamento",
-      "description": "Indicador de risco da pessoa física ou jurídica.",
-      "validate": {
-        "required": true
-      }
-    },
-    {
       "label": "Custos fixos",
       "type": "textfield",
       "id": "Field_0ri8ukr",
