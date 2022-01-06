@@ -68,8 +68,23 @@ Há ainda um servidor externo ao sistema, o Services Server, que poderá ser út
 com o intuito de intermediar o sistema com o cliente, para o preenchimento dos dados para a solicitação.</br>
 
 São três piscinas:
-&nbsp;&nbsp;&nbsp;&nbsp;- Cliente
-&nbsp;&nbsp;&nbsp;&nbsp;- Corretora
-&nbsp;&nbsp;&nbsp;&nbsp;- Banco
+&nbsp;&nbsp;&nbsp;&nbsp;- Cliente</br>
+&nbsp;&nbsp;&nbsp;&nbsp;- Corretora</br>
+&nbsp;&nbsp;&nbsp;&nbsp;- Banco</br>
 
+<p align="center">
+	<img src="https://github.com/TsuHub/Financiamento-Imobiliario/blob/main/System%20Architecture/Pools/Cliente.png"></br>
+	<b>Cliente</b>
+</p>
+</br>
+<p align="center">
+	<img src="https://github.com/TsuHub/Financiamento-Imobiliario/blob/main/System%20Architecture/Pools/Corretora.png"></br>
+	<b>Corretora</b>
+</p>
+</br>
+<p align="center">
+	<img src="https://github.com/TsuHub/Financiamento-Imobiliario/blob/main/System%20Architecture/Pools/Banco.png"></br>
+	<b>Banco</b>
+</p>
+</br>
 
