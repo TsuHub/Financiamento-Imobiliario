@@ -1,8 +1,8 @@
-==================================================================================================================================================
+============================================================================================
 
 							GESTÃO DE PROCESSOS DE NEGÓCIOS
 
-==================================================================================================================================================
+============================================================================================
 
 Projeto de Orquestração de um processo de serviços (Automação de processo de negócio em BPMN 2.0
 
@@ -11,18 +11,18 @@ Orientador:
 Prof. Dr. Marcelo Fantinato
 
 Integrantes:
-Caio Silvestre Almeida da Silva
-Guilherme Estevam Ferreira Putzeys
-João Pedro Rodrigues Camargo
-Tsuyoshi Yodogawa
+Caio Silvestre Almeida da Silva</br>
+Guilherme Estevam Ferreira Putzeys</br>
+João Pedro Rodrigues Camargo</br>
+Tsuyoshi Yodogawa</br>
 
-==================================================================================================================================================
+============================================================================================
 
-Tecnologias utilizadas:
+## Tecnologias utilizadas:
 
 Para:
 
-- ProcessServer
+###- ProcessServer
 
 	- Configuração do projeto:			Camunda Initializr (start.camunda.com)
 	- Camunda Platform:				7.16
@@ -31,7 +31,7 @@ Para:
 	- Sistema de build:				Maven 4.0.0
 	- Gerenciador de dependências:			Maven 4.0.0
 
-- Client (FinancingRequest)
+###- Client (FinancingRequest)
 
 	- Configuração do projeto: Spring Initializr (start.spring.io)
 	- Spring Boot:					versão 2.6.1
@@ -40,7 +40,7 @@ Para:
 	- Gerenciador de dependências:	Maven 4.0.0
 
 
-- ClientFinancingRequest
+###- ClientFinancingRequest
 
 	- Java RMI
 	- JDK 11
