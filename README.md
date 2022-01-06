@@ -54,13 +54,4 @@ Consiste na simulação da solicitação de um financiamento imobiliário com o 
 A arquitetura é organizada da seguinte maneira:
 </br>
 
-<p align="center"><img src="https://github.com/TsuHub/Financiamento-Imobiliario/blob/main/System%20Architecture/Architecture%20BPMS.png"></p>
 
-<p align="center"><img src="https://github.com/TsuHub/Financiamento-Imobiliario/blob/main/System%20Architecture/Architecture%20BPMS.png"></p>
-
-<p align="center">
-  <img src="https://github.com/TsuHub/Financiamento-Imobiliario/blob/main/System%20Architecture/Architecture%20BPMS.png">
-  <br/>
-  <b>(Motor Nagano MN 6000 carburado da serra elétrica - capacidade de 500ml de gasolina, já com a sonda lambda embutida no coletor)</b><br>
-</p>
-<br/>
