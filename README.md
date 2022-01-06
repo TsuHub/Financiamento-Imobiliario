@@ -45,7 +45,7 @@ Tsuyoshi Yodogawa</br>
 
 ## O Projeto
 
-Consiste na simulação da solicitação de um financiamento imobiliário com o BPMN 2.0
+Consiste na simulação da solicitação de um financiamento imobiliário em BPMN 2.0
 
 A arquitetura é organizada da seguinte maneira:
 </br>
