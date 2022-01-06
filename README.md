@@ -94,5 +94,5 @@ Este sistema está organizado em três camadas:</br>
 2. <a href="https://github.com/TsuHub/Financiamento-Imobiliario/tree/main/ProcessServer/src/main/java/com/gpn/workflow/form">Formulários de preenchimentos das entidades</a></br>
 &nbsp;&nbsp;&nbsp;&nbsp;Na camada de form, existem ainda três subdivisões, uma para cada uma das entidades. Esta camada é responsável por armazenar e tratar os dados inputados pelo cliente.</br></br>
 3. <a href="https://github.com/TsuHub/Financiamento-Imobiliario/tree/main/ProcessServer/src/main/java/com/gpn/workflow/messages">Camada de transição entre piscinas (mensagens)</a></br>
-&nbsp;&nbsp;&nbsp;&nbsp;Esta camada é responsável por fazer a transição entre processos de piscinas diferentes, i.e., são as classes responsáveis por permitir a execução sequencial de um processo de da piscina Cliente para um processo da piscina Corretora, por exemplo.
+&nbsp;&nbsp;&nbsp;&nbsp;Esta camada é responsável por fazer a transição entre processos de piscinas diferentes, i.e., são as classes responsáveis por permitir a execução sequencial de um processo da piscina Cliente para um processo da piscina Corretora, por exemplo.
 </br></br>
