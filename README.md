@@ -67,7 +67,7 @@ com o intuito de intermediar o sistema com o cliente, para o preenchimento dos d
 
 ## As entidades
 
-São três piscinas:
+São três piscinas:</br>
 link dos <a href="https://github.com/TsuHub/Financiamento-Imobiliario/tree/main/ProcessServer/src/main/resources">modelos</a> no projeto.
 </br>
 
@@ -89,6 +89,12 @@ link dos <a href="https://github.com/TsuHub/Financiamento-Imobiliario/tree/main/
 
 
 ### <a href="https://github.com/TsuHub/Financiamento-Imobiliario/tree/main/ProcessServer">ProcessServer</a>
+</br>
+Este sistema está organizado em três camadas:</br>
+1. <a href="https://github.com/TsuHub/Financiamento-Imobiliario/tree/main/ProcessServer/src/main/java/com/gpn/workflow/client_repository">Repositório dos dados do cliente</a></br>
+2. <a href="https://github.com/TsuHub/Financiamento-Imobiliario/tree/main/ProcessServer/src/main/java/com/gpn/workflow/form">Formulários de preenchimentos das entidades</a></br>
+3. <a href="https://github.com/TsuHub/Financiamento-Imobiliario/tree/main/ProcessServer/src/main/java/com/gpn/workflow/messages">Camada de transição entre piscinas (mensagens)</a></br>
 
-
-
+1. A simulação da persistências dos dados ocorre em uma estrutura Map, onde é guardado os dados de cada <a href="https://github.com/TsuHub/Financiamento-Imobiliario/blob/main/ProcessServer/src/main/java/com/gpn/workflow/form/client/ClientData.java">cliente/solicitante</a>.</br>
+2. Na camada de form, existem ainda três subdivisões, uma para cada uma das entidades. Esta camada é responsável por armazenar e tratar os dados inputados pelo cliente.</br>
+3. Esta camada é responsável por fazer a transição entre processos de piscinas diferentes, i.e., são as classes responsáveis por permitir a execução sequencial de um processo de da piscina Cliente para um processo da piscina Corretora, por exemplo.
