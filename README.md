@@ -68,6 +68,7 @@ Há ainda um servidor externo ao sistema, o Services Server, que poderá ser út
 com o intuito de intermediar o sistema com o cliente, para o preenchimento dos dados para a solicitação.</br>
 
 São três piscinas:
+</br>
 &nbsp;&nbsp;&nbsp;&nbsp;- Cliente</br>
 &nbsp;&nbsp;&nbsp;&nbsp;- Corretora</br>
 &nbsp;&nbsp;&nbsp;&nbsp;- Banco</br>
