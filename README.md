@@ -22,7 +22,7 @@ Tsuyoshi Yodogawa</br>
 
 Para:
 
-###- ProcessServer
+### - ProcessServer
 
 	- Configuração do projeto:			Camunda Initializr (start.camunda.com)
 	- Camunda Platform:				7.16
@@ -31,7 +31,7 @@ Para:
 	- Sistema de build:				Maven 4.0.0
 	- Gerenciador de dependências:			Maven 4.0.0
 
-###- Client (FinancingRequest)
+### - Client (FinancingRequest)
 
 	- Configuração do projeto: Spring Initializr (start.spring.io)
 	- Spring Boot:					versão 2.6.1
@@ -40,7 +40,7 @@ Para:
 	- Gerenciador de dependências:	Maven 4.0.0
 
 
-###- ClientFinancingRequest
+### - ClientFinancingRequest
 
 	- Java RMI
 	- JDK 11
