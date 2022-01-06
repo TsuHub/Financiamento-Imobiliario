@@ -67,11 +67,10 @@ Então o sistema BPMS (<i>Business and Process Management System</i>) está orga
 Há ainda um servidor externo ao sistema, o Services Server, que poderá ser útil em futuras implementações</br>
 com o intuito de intermediar o sistema com o cliente, para o preenchimento dos dados para a solicitação.</br>
 
+## As entidades
+
 São três piscinas:
 </br>
-&nbsp;&nbsp;&nbsp;&nbsp;- Cliente</br>
-&nbsp;&nbsp;&nbsp;&nbsp;- Corretora</br>
-&nbsp;&nbsp;&nbsp;&nbsp;- Banco</br>
 
 <p align="center">
 	<img src="https://github.com/TsuHub/Financiamento-Imobiliario/blob/main/System%20Architecture/Pools/Cliente.png"></br>
