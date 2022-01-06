@@ -60,9 +60,9 @@ A arquitetura é organizada da seguinte maneira:
 
 Então o sistema BPMS (<i>Business and Process Management System</i>) está organizado em 3 camadas:</br>
 </br>
-</quad>1. Camunda Modeler - Para a modelagem dos processos;</br>
-</quad>2. Repositório - Apenas uma simulação, logo os dados são carregados na RAM;</br>
-</quad>3. Camunda Platform Run - Para o servidor;</br>
+&nbsp;&nbsp;&nbsp;&nbsp;1. Camunda Modeler - Para a modelagem dos processos;</br>
+&nbsp;&nbsp;&nbsp;&nbsp;2. Repositório - Apenas uma simulação, logo os dados são carregados na RAM;</br>
+&nbsp;&nbsp;&nbsp;&nbsp;3. Camunda Platform Run - Para o servidor;</br>
 	
 Há ainda um servidor externo ao sistema, o Services Server, que poderá ser útil em futuras implementações</br>
 com o intuito de intermediar o sistema com o cliente, para o preenchimento dos dados para a solicitação.</br>
