@@ -68,6 +68,7 @@ com o intuito de intermediar o sistema com o cliente, para o preenchimento dos d
 ## As entidades
 
 São três piscinas:
+<a href="https://github.com/TsuHub/Financiamento-Imobiliario/tree/main/ProcessServer/src/main/resources">Os modelos</a>
 </br>
 
 <p align="center">
@@ -85,6 +86,7 @@ São três piscinas:
 	<b>Banco</b>
 </p>
 </br>
+
 
 ### <a href="https://github.com/TsuHub/Financiamento-Imobiliario/tree/main/ProcessServer">ProcessServer</a>
 
