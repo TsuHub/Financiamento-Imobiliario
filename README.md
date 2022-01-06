@@ -56,6 +56,8 @@ A arquitetura é organizada da seguinte maneira:
 
 <p align="center"><img src="https://github.com/TsuHub/Financiamento-Imobiliario/blob/main/System%20Architecture/Architecture%20BPMS.png"></p>
 
+<p align="center"><img src="https://github.com/TsuHub/Financiamento-Imobiliario/blob/main/System%20Architecture/Architecture%20BPMS.png"></p>
+
 <p align="center">
   <img src="https://github.com/TsuHub/Financiamento-Imobiliario/blob/main/System%20Architecture/Architecture%20BPMS.png">
   <br/>
