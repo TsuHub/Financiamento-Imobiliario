@@ -20,8 +20,6 @@ Tsuyoshi Yodogawa</br>
 
 ## Tecnologias utilizadas:
 
-Para:
-
 ### - ProcessServer
 
 	- Configuração do projeto:			Camunda Initializr (start.camunda.com)
