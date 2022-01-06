@@ -53,7 +53,13 @@ Consiste na simulação da solicitação de um financiamento imobiliário com o 
 
 A arquitetura é organizada da seguinte maneira:
 
-<p aling="center"><img src="https://github.com/TsuHub/Financiamento-Imobiliario/blob/main/System%20Architecture/Architecture%20BPMS.png"></p>
+<p aling="center">
+	<img src="https://github.com/TsuHub/Financiamento-Imobiliario/blob/main/System%20Architecture/Architecture%20BPMS.png">
+</p>
+
+<p align="center">
+  <img src="https://github.com/TsuHub/Financiamento-Imobiliario/blob/main/System%20Architecture/Architecture%20BPMS.png">
+</p>
 
 <p align="center">
   <img src="https://github.com/TsuHub/Financiamento-Imobiliario/blob/main/System%20Architecture/Architecture%20BPMS.png">
