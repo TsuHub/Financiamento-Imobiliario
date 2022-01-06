@@ -3,7 +3,7 @@
 
 </br>Projeto de Orquestração de um processo de serviços (Automação de processo de negócio em BPMN 2.0
 
-<p align="center">============================================================================================</p>
+<p align="center">===========================================================================</p>
 
 Orientador:
 Prof. Dr. Marcelo Fantinato
@@ -14,7 +14,7 @@ Guilherme Estevam Ferreira Putzeys</br>
 João Pedro Rodrigues Camargo</br>
 Tsuyoshi Yodogawa</br>
 
-<p align="center">============================================================================================</p>
+<p align="center">===========================================================================</p>
 
 ## Tecnologias utilizadas:
 
