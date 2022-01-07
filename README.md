@@ -8,7 +8,7 @@
 Orientador:
 Prof. Dr. Marcelo Fantinato
 
-Integrantes:
+Integrantes:</br>
 Caio Silvestre Almeida da Silva</br>
 Guilherme Estevam Ferreira Putzeys</br>
 João Pedro Rodrigues Camargo</br>
