@@ -96,3 +96,4 @@ Este sistema está organizado em três camadas:</br>
 3. <a href="https://github.com/TsuHub/Financiamento-Imobiliario/tree/main/ProcessServer/src/main/java/com/gpn/workflow/messages">Camada de transição entre piscinas (mensagens)</a></br>
 &nbsp;&nbsp;&nbsp;&nbsp;Esta camada é responsável por fazer a transição entre processos de piscinas diferentes, i.e., são as classes responsáveis por permitir a execução sequencial de um processo da piscina Cliente para um processo da piscina Corretora, por exemplo.
 </br></br>
+<a href="https://github.com/TsuHub/Financiamento-Imobiliario/blob/main/Modelo%20Geral.png">Modelagem completa das entidades.</a>
