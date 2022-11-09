@@ -5,17 +5,6 @@
 
 <p align="center">===========================================================================</p>
 
-Orientador:
-Prof. Dr. Marcelo Fantinato
-
-Integrantes:</br>
-Caio Silvestre Almeida da Silva</br>
-Guilherme Estevam Ferreira Putzeys</br>
-João Pedro Rodrigues Camargo</br>
-Tsuyoshi Yodogawa</br>
-
-<p align="center">===========================================================================</p>
-
 ## Tecnologias utilizadas:
 
 ### - ProcessServer
