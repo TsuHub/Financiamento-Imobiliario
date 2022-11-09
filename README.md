@@ -1,6 +1,8 @@
 
 ## <p align="center">GESTÃO DE PROCESSOS DE NEGÓCIOS</p>
 
+<p align="center">===========================================================================</p>
+
 </br><p align="center">Projeto de Orquestração de um processo de serviços (Automação de processo de negócio em BPMN 2.0</p>
 
 <p align="center">===========================================================================</p>
